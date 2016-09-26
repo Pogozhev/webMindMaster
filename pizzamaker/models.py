@@ -1,30 +1,32 @@
+from django.contrib.auth.models import User
 from django.db import models
-# Create your models here.
+from django.utils import timezone
 
-# Здеся нам нужно писать свой код
-# Класс, описывающий объект дерева
+
 class Tree(models.Model):
-    name = models.CharField(max_length = 255)
-    create_date = models.DateTime()
-    id_creator = models.ForeignKey(User) # ?????
+    """Description
+    of class"""
+    name = models.CharField(max_length=255)
+    create_date = models.DateTimeField(default=timezone.now)
+    creator = models.ForeignKey(User)
 
     def __str__(self):
-        return name;
+        return self.name
 
 # Класс, описывающий объект
 class Object(models.Model):
-    id_tree = models.ForeignKey(Tree)
-    name = models.CharField(max_length = 255)
-    address = models.CharField(max_length = 255)
-    fields = models.DataSet(Field) # ????
+    tree = models.ForeignKey(Tree)
+    name = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
 
     def __str__(self):
-        return name;
+        return self.name
 
 # Класс, описывающий поле описания объекта
-class Field(models.Field):
+class Field(models.Model):
     name = models.CharField(max_length = 255)
     value = models.CharField(max_length = 255)
+    object = models.ForeignKey(Object)
 
     def __str__(self):
-        return name;
+        return self.name

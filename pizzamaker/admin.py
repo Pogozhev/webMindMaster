@@ -1,8 +1,16 @@
 from django.contrib import admin
 
-# Register your models here.
-# Это просто примеры работы
-from django.contrib import admin
-from .models import Choice, Question
+from pizzamaker.models import Tree, Object, Field
 
-# ЗДеся нам нужно написать свой код
+
+class FieldInline(admin.TabularInline):
+    model = Field
+
+
+class ObjectAdmin(admin.ModelAdmin):
+    inlines = [FieldInline]
+
+
+admin.site.register(Tree)
+admin.site.register(Object, ObjectAdmin)
+admin.site.register(Field)
