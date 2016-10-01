@@ -1,6 +1,5 @@
 from django.contrib import admin
-
-from pizzamaker.models import Tree, Object, Field
+from pizzamaker.models import Object, Field
 
 
 class FieldInline(admin.TabularInline):
@@ -11,6 +10,6 @@ class ObjectAdmin(admin.ModelAdmin):
     inlines = [FieldInline]
 
 
-admin.site.register(Tree)
 admin.site.register(Object, ObjectAdmin)
 admin.site.register(Field)
+

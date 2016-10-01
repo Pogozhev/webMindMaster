@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Trees{% endblock %}</h1>
+    <ol>
+        {% for tree in tree_list %}
+            <li>{{ tree }}</li>
+        {% endfor %}
+    </ol>
+{% endblock %}
