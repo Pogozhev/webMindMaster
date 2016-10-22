@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4611b052-a1e1-4cb7-9f13-6387e987cf9d" name="Default" comment="Разделение структуры проекта по объектам (tree, workspace)">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizzamaker/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/workspace/workplace.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trees/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trees/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trees/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trees/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trees/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trees/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workplace/migrations/__init__.py" afterPath="" />
+    <list default="true" id="4611b052-a1e1-4cb7-9f13-6387e987cf9d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kursach/settings.py" afterPath="$PROJECT_DIR$/kursach/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kursach/urls.py" afterPath="$PROJECT_DIR$/kursach/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/trees/tree_list.html" afterPath="$PROJECT_DIR$/templates/trees/tree_list.html" />
     </list>
     <ignored path="kursach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -690,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475313433310</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Так  короче. Разделил объекты по папкам (Trees, Objects, Fields). В плане моделей все работает. Админка работает. Создал первый View для отображения списка деревьев из базы - он не работает, хотя должен.">
+      <created>1477128955620</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1477128955620</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -733,7 +720,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Коммит" />
     <MESSAGE value="Разделение структуры проекта по объектам (tree, workspace)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Разделение структуры проекта по объектам (tree, workspace)" />
+    <MESSAGE value="Так  короче. Разделил объекты по папкам (Trees, Objects, Fields). В плане моделей все работает. Админка работает. Создал первый View для отображения списка деревьев из базы - он не работает, хотя должен." />
+    <option name="LAST_COMMIT_MESSAGE" value="Так  короче. Разделил объекты по папкам (Trees, Objects, Fields). В плане моделей все работает. Админка работает. Создал первый View для отображения списка деревьев из базы - он не работает, хотя должен." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
