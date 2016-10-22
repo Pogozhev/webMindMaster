@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/dist/css/bootstrap.css' %}"/>
-    <script type="javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    {% comment %}<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <script type="javascript" src="bower_components/jquery/dist/jquery.min.js"></script>{% endcomment %}
 </head>
 <body>
+<span>header</span>
     {% block content %}
     {% endblock %}
+<span>footer</span>
 </body>
 </html>

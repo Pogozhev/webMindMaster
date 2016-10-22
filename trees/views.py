@@ -1,5 +1,15 @@
-from trees.models import Tree
-from django.views.generic import ListView
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.template import loader
 
-class TreeListView(ListView):
-    model = Tree;
+from trees.models import Tree
+
+
+# Create your views here.
+def tree_list(request):
+    trees_list = Tree.objects.all()
+    template = loader.get_template('trees/tree_list.html')
+    context = {
+        'trees_list': trees_list,
+    }
+    return HttpResponse(template.render(context, request))

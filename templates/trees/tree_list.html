@@ -4,7 +4,7 @@
     <h1>{% block title %}Trees{% endblock %}</h1>
     <ol>
         {% for tree in tree_list %}
-            <li>{{ tree }}</li>
+            <li>{{ tree.name }}</li>
         {% endfor %}
     </ol>
 {% endblock %}
