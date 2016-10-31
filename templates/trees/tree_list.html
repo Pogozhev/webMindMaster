@@ -4,10 +4,10 @@
     <h1>{% block title %}Trees{% endblock %}</h1>
     <ol>
         {% for tree in tree_list %}
-            <li>{{ tree.name }}</li>
+            <li><a href="{% url 'workspace' tree.id %}">{{ tree.name }}</a></li>
         {% endfor %}
     </ol>
 
-    <input type="button" value="Создать"/>
+    <a href="{% url 'workspace' %}">Создать</a>
 
 {% endblock %}

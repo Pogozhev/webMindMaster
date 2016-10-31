@@ -20,5 +20,6 @@ from trees import views as tree_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', tree_views.tree_list, name='tree_list'),
-    url(r'^workspace/', )
+    url(r'^workspace/', tree_views.tree_workspace, name='workspace'),
+    url(r'^(?P<tree_id>[0-9]+)/$', tree_views.tree_workspace, name='workspace')
 ]
