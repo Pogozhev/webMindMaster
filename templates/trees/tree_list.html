@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %}Trees{% endblock %}</h1>
+    <h1>{% block title %}{{ title }}{% endblock %}</h1>
     <ol>
         {% for tree in tree_list %}
-            <li><a href="{% url 'workspace' tree.id %}">{{ tree.name }}</a></li>
+            <li>{{ tree.name }}</li>
         {% endfor %}
     </ol>
 
-    <a href="{% url 'workspace' %}">Создать</a>
+    <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}">Создать</a>
 
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <span>{{ tree.name }}</span>
+
+    <ol>
+        {% for object in objects %}
+            <li>{{ object.name }}</li>
+            {% for field in fields %}
+                <ol>
+                {% if field.object == object %}
+                    <li>{{ field.name }} : {{ field.value }}</li>
+                {% endif %}
+                </ol>
+            {% endfor %}
+        {% endfor %}
+    </ol>
+
+    <input type="button" value="Сохранить"/>
+
+{% endblock %}
