@@ -13,14 +13,12 @@ class Object(models.Model):
 
     def dump(self):
         """
-        Функция представления объекта в JSON
         """
         return '{ "Object" : "' + self.name + '", ' + '"Address" : "' + self.address + '", "Tree" : "' + self.Tree.dump() + '" }'
 
 
 def getObjects(tree):
     """
-    Функция получения всех объектов выбранного дерева
     """
     objects = Object.objects.filter(tree=tree).order_by('address')
     return objects

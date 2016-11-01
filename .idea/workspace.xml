@@ -2,15 +2,267 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4611b052-a1e1-4cb7-9f13-6387e987cf9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/account/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/workspace/workspace_update_tree.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/workspace/workspace.html" afterPath="$PROJECT_DIR$/templates/workspace/workspace_new_tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profile/views.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/static/bootstrap/.bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/CHANGELOG.md" afterPath="$PROJECT_DIR$/static/bootstrap/CHANGELOG.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/Gemfile" afterPath="$PROJECT_DIR$/static/bootstrap/Gemfile" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/Gemfile.lock" afterPath="$PROJECT_DIR$/static/bootstrap/Gemfile.lock" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/static/bootstrap/Gruntfile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/static/bootstrap/ISSUE_TEMPLATE.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/static/bootstrap/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/README.md" afterPath="$PROJECT_DIR$/static/bootstrap/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/bower.json" afterPath="$PROJECT_DIR$/static/bootstrap/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap-theme.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap-theme.min.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/static/bootstrap/dist/css/bootstrap.min.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/static/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/static/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/static/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/static/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/static/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/bootstrap/dist/js/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/js/npm.js" afterPath="$PROJECT_DIR$/static/bootstrap/dist/js/npm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/static/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/static/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/static/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/.jshintrc" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/.jshintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/bs-commonjs-generator.js" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/bs-commonjs-generator.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/bs-glyphicons-data-generator.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/bs-lessdoc-parser.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/bs-raw-files-generator.js" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/bs-raw-files-generator.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/change-version.js" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/change-version.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/configBridge.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/npm-shrinkwrap.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/static/bootstrap/grunt/sauce_browsers.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/.jscsrc" afterPath="$PROJECT_DIR$/static/bootstrap/js/.jscsrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/.jshintrc" afterPath="$PROJECT_DIR$/static/bootstrap/js/.jshintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/affix.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/alert.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/button.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/collapse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/dropdown.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/modal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/popover.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/scrollspy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/tab.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/tooltip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/transition.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/.csscomb.json" afterPath="$PROJECT_DIR$/static/bootstrap/less/.csscomb.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/.csslintrc" afterPath="$PROJECT_DIR$/static/bootstrap/less/.csslintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/alerts.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/alerts.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/badges.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/badges.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/bootstrap.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/breadcrumbs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/button-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/buttons.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/carousel.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/close.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/close.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/code.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/code.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/component-animations.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/dropdowns.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/dropdowns.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/glyphicons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/grid.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/input-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/jumbotron.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/labels.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/list-group.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/media.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/media.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/alerts.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/background-variant.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/background-variant.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/border-radius.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/border-radius.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/center-block.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/center-block.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/clearfix.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/clearfix.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/forms.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/gradients.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/gradients.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/grid-framework.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/grid-framework.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/hide-text.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/image.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/image.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/labels.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/list-group.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/nav-divider.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/nav-divider.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/nav-vertical-align.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/nav-vertical-align.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/opacity.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/opacity.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/pagination.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/pagination.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/panels.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/panels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/progress-bar.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/progress-bar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/reset-filter.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/reset-filter.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/reset-text.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/reset-text.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/resize.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/resize.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/responsive-visibility.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/responsive-visibility.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/size.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/size.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/tab-focus.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/table-row.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/table-row.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/text-emphasis.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/text-emphasis.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/text-overflow.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/text-overflow.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/mixins/vendor-prefixes.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/modals.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/navbar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/navs.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/navs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/normalize.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/normalize.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/pager.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/pager.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/pagination.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/panels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/popovers.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/popovers.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/print.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/print.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/progress-bars.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/progress-bars.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/responsive-embed.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/responsive-embed.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/responsive-utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/scaffolding.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/tables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/theme.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/thumbnails.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/thumbnails.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/tooltip.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/tooltip.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/type.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/utilities.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/wells.less" afterPath="$PROJECT_DIR$/static/bootstrap/less/wells.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/nuget/MyGet.ps1" afterPath="$PROJECT_DIR$/static/bootstrap/nuget/MyGet.ps1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/nuget/bootstrap.less.nuspec" afterPath="$PROJECT_DIR$/static/bootstrap/nuget/bootstrap.less.nuspec" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/nuget/bootstrap.nuspec" afterPath="$PROJECT_DIR$/static/bootstrap/nuget/bootstrap.nuspec" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/package.js" afterPath="$PROJECT_DIR$/static/bootstrap/package.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/bootstrap/package.json" afterPath="$PROJECT_DIR$/static/bootstrap/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/.bower.json" afterPath="$PROJECT_DIR$/static/jquery/.bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/AUTHORS.txt" afterPath="$PROJECT_DIR$/static/jquery/AUTHORS.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/LICENSE.txt" afterPath="$PROJECT_DIR$/static/jquery/LICENSE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/README.md" afterPath="$PROJECT_DIR$/static/jquery/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/bower.json" afterPath="$PROJECT_DIR$/static/jquery/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/core.js" afterPath="$PROJECT_DIR$/static/jquery/dist/core.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/static/jquery/dist/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/static/jquery/dist/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/static/jquery/dist/jquery.min.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.slim.js" afterPath="$PROJECT_DIR$/static/jquery/dist/jquery.slim.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.slim.min.js" afterPath="$PROJECT_DIR$/static/jquery/dist/jquery.slim.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.slim.min.map" afterPath="$PROJECT_DIR$/static/jquery/dist/jquery.slim.min.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/external/sizzle/LICENSE.txt" afterPath="$PROJECT_DIR$/static/jquery/external/sizzle/LICENSE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/external/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/static/jquery/external/sizzle/dist/sizzle.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/external/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/static/jquery/external/sizzle/dist/sizzle.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/external/sizzle/dist/sizzle.min.map" afterPath="$PROJECT_DIR$/static/jquery/external/sizzle/dist/sizzle.min.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/.eslintrc.json" afterPath="$PROJECT_DIR$/static/jquery/src/.eslintrc.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/jsonp.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/load.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/parseXML.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/script.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/var/location.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/var/location.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/var/nonce.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/var/rquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/static/jquery/src/ajax/xhr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/static/jquery/src/attributes.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/static/jquery/src/attributes/attr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/static/jquery/src/attributes/classes.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/static/jquery/src/attributes/prop.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/static/jquery/src/attributes/support.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/static/jquery/src/attributes/val.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/static/jquery/src/callbacks.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core.js" afterPath="$PROJECT_DIR$/static/jquery/src/core.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/DOMEval.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/DOMEval.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/access.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/init.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/parseHTML.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/ready-no-deferred.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/ready-no-deferred.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/ready.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/readyException.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/readyException.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/stripAndCollapse.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/stripAndCollapse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/support.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/support.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/static/jquery/src/core/var/rsingleTag.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css.js" afterPath="$PROJECT_DIR$/static/jquery/src/css.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/addGetHookIf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/adjustCSS.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/adjustCSS.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/curCSS.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/showHide.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/showHide.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/support.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/var/cssExpand.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/var/getStyles.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/isHiddenWithinTree.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/var/isHiddenWithinTree.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/var/rmargin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/swap.js" afterPath="$PROJECT_DIR$/static/jquery/src/css/var/swap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data.js" afterPath="$PROJECT_DIR$/static/jquery/src/data.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/static/jquery/src/data/Data.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/var/acceptData.js" afterPath="$PROJECT_DIR$/static/jquery/src/data/var/acceptData.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/var/dataPriv.js" afterPath="$PROJECT_DIR$/static/jquery/src/data/var/dataPriv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/var/dataUser.js" afterPath="$PROJECT_DIR$/static/jquery/src/data/var/dataUser.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/static/jquery/src/deferred.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/deferred/exceptionHook.js" afterPath="$PROJECT_DIR$/static/jquery/src/deferred/exceptionHook.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/static/jquery/src/deprecated.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/static/jquery/src/dimensions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/effects.js" afterPath="$PROJECT_DIR$/static/jquery/src/effects.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/static/jquery/src/effects/Tween.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/static/jquery/src/effects/animatedSelector.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event.js" afterPath="$PROJECT_DIR$/static/jquery/src/event.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/static/jquery/src/event/ajax.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/static/jquery/src/event/alias.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/focusin.js" afterPath="$PROJECT_DIR$/static/jquery/src/event/focusin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/static/jquery/src/event/support.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/trigger.js" afterPath="$PROJECT_DIR$/static/jquery/src/event/trigger.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/static/jquery/src/exports/amd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/static/jquery/src/exports/global.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/static/jquery/src/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/buildFragment.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/buildFragment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/getAll.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/getAll.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/setGlobalEval.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/setGlobalEval.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/support.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/var/rscriptType.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/var/rscriptType.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/var/rtagName.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/var/rtagName.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/wrapMap.js" afterPath="$PROJECT_DIR$/static/jquery/src/manipulation/wrapMap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/offset.js" afterPath="$PROJECT_DIR$/static/jquery/src/offset.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/queue.js" afterPath="$PROJECT_DIR$/static/jquery/src/queue.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/static/jquery/src/queue/delay.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/static/jquery/src/selector-native.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/static/jquery/src/selector-sizzle.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/selector.js" afterPath="$PROJECT_DIR$/static/jquery/src/selector.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/static/jquery/src/serialize.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/static/jquery/src/traversing.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/static/jquery/src/traversing/findFilter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing/var/dir.js" afterPath="$PROJECT_DIR$/static/jquery/src/traversing/var/dir.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/static/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing/var/siblings.js" afterPath="$PROJECT_DIR$/static/jquery/src/traversing/var/siblings.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/ObjectFunctionString.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/ObjectFunctionString.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/arr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/class2type.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/concat.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/document.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/document.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/documentElement.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/documentElement.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/fnToString.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/fnToString.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/getProto.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/getProto.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/hasOwn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/indexOf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/pnum.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/push.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/rcssNum.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/rcssNum.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/rnothtmlwhite.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/rnothtmlwhite.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/slice.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/support.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/static/jquery/src/var/toString.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/static/jquery/src/wrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/account/login.html" afterPath="$PROJECT_DIR$/templates/profile/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/kursach.iml" afterPath="$PROJECT_DIR$/.idea/kursach.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fields/models.py" afterPath="$PROJECT_DIR$/fields/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kursach/settings.py" afterPath="$PROJECT_DIR$/kursach/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kursach/urls.py" afterPath="$PROJECT_DIR$/kursach/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/models.py" afterPath="$PROJECT_DIR$/objects/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/trees/tree_list.html" afterPath="$PROJECT_DIR$/templates/trees/tree_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trees/models.py" afterPath="$PROJECT_DIR$/trees/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trees/views.py" afterPath="$PROJECT_DIR$/trees/views.py" />
     </list>
     <ignored path="kursach.iws" />
@@ -43,31 +295,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objects/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kursach/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="e#640#681#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace_update_tree.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/workspace/workspace_update_tree.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -86,8 +330,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trees/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+            <state relative-caret-position="425">
+              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -95,21 +339,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tree_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tree_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/trees/tree_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kursach/wsgi.py">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/profile/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="115" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kursach/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="635">
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,30 +392,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trees/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fields/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace_new_tree.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/workspace/workspace_new_tree.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="221">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -152,8 +404,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -185,19 +437,21 @@
         <option value="$PROJECT_DIR$/objects/admin.py" />
         <option value="$PROJECT_DIR$/fields/admin.py" />
         <option value="$PROJECT_DIR$/trees/admin.py" />
-        <option value="$PROJECT_DIR$/kursach/settings.py" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/workspace/workspace.html" />
-        <option value="$PROJECT_DIR$/fields/models.py" />
-        <option value="$PROJECT_DIR$/trees/models.py" />
-        <option value="$PROJECT_DIR$/objects/models.py" />
         <option value="$PROJECT_DIR$/templates/account/login.html" />
         <option value="$PROJECT_DIR$/templates/workspace/workspace_update_tree.html" />
         <option value="$PROJECT_DIR$/templates/workspace/workspace_new_tree.html" />
+        <option value="$PROJECT_DIR$/profile/views.py" />
+        <option value="$PROJECT_DIR$/fields/models.py" />
+        <option value="$PROJECT_DIR$/objects/models.py" />
+        <option value="$PROJECT_DIR$/trees/models.py" />
         <option value="$PROJECT_DIR$/kursach/urls.py" />
         <option value="$PROJECT_DIR$/trees/views.py" />
+        <option value="$PROJECT_DIR$/templates/profile/login.html" />
         <option value="$PROJECT_DIR$/templates/trees/tree_list.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/kursach/settings.py" />
       </list>
     </option>
   </component>
@@ -242,27 +496,27 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -272,11 +526,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -286,11 +540,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -304,11 +558,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -322,11 +576,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -334,17 +588,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="account" />
+              <option name="myItemId" value="profile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMindMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMindMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMindMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -354,11 +636,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -368,11 +650,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
+              <option name="myItemId" value="webMindMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -380,24 +662,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pizzamaker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,120 +684,6 @@
       <recent name="C:\Users\Arkady\Desktop\trpo\pizzamaker\pizzamaker" />
       <recent name="C:\Users\Arkady\Desktop\trpo\pizzamaker\pizzamaker\migrations" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/kursach.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/kursach/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/trees/tree_list.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Django server.kursach">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -767,10 +921,10 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="kursach.settings" />
+        <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Python35\python.exe" />
+      <option name="SDK_HOME" value="C:\Python34\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -884,13 +1038,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kursach/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pizzamaker/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pizzamaker/admin.py" />
     <entry file="file://$PROJECT_DIR$/pizzamaker/apps.py" />
@@ -1038,33 +1185,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kursach/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/objects/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,22 +1239,7 @@
           <Categories>
             <Category>Fields</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="25" />
-          <folding />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -1138,33 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trees/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fields/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1172,14 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trees/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1192,14 +1266,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kursach/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/workspace/workspace_new_tree.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1208,20 +1274,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/profile/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#59#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fields/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trees/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kursach/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#640#681#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trees/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trees/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        <state relative-caret-position="425">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/trees/tree_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kursach/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="115" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
           <folding />
         </state>
       </provider>

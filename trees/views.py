@@ -1,7 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import loader
 from django.contrib.auth.models import User
+from django.conf import settings
 
 from trees.models import Tree
 from objects.models import Object
@@ -11,6 +12,8 @@ from django.utils.translation import ugettext as _
 
 # Create your views here.
 def tree_list(request):
+    """if not request.user.is_authenticated:
+        return redirect(request, 'profile/login.html')"""
     tree_List = Tree.objects.all()
     title = _('List of trees')
     template = loader.get_template('trees/tree_list.html')
@@ -22,22 +25,25 @@ def tree_list(request):
 
 
 def workspace_update_tree(request):
-    tree = Tree.objects.filter(pk__in=request)
-    objects = Object.objects.filter(tree=tree)
-    fields = Field.object.field_set(object=objects)
+   """if not request.user.is_authenticated:
+        return redirect(request, 'profile/login.html')"""
+   tree = Tree.objects.filter(pk__in=request)
+   objects = Object.objects.filter(tree=tree)
+   fields = Field.object.field_set(object=objects)
 
-    template = loader.get_template('workspace/workspace_update_tree.html')
-    context = {
+   template = loader.get_template('workspace/workspace_update_tree.html')
+   context = {
         'tree': tree,
         'objects': objects,
         'fields': fields
-    }
-    return HttpResponse(template.render(context, request))
+   }
+   return HttpResponse(template.render(context, request))
 
 
 def workspace_new_tree(request, tree_name):
-    user = User.objects.get(username='admin')
-    tree = Tree.objects.create(name=tree_name, creator=user)
+    """if not request.user.is_authenticated:
+        return redirect(request, 'profile/login.html')"""
+    tree = Tree.objects.create(name=tree_name, creator=request.user)
     object1 = Object.objects.create(name='root', tree=tree, address='1')
     object2 = Object.objects.create(name='object 2', tree=tree, address='1.1')
     field1 = Field.objects.create(name='field 1', value='value 1', object=object1)

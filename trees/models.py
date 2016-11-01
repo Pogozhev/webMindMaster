@@ -14,7 +14,6 @@ class Tree(models.Model):
 
     def dump(self):
         """
-        Функция представления объекта в JSON
         """
         return '{ "Tree" : "' + self.name + '", ' + '"Creator" : "' + self.creator + '", "Create_Date" : "' + self.create_date + '" }'
 
