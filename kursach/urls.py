@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', tree_views.tree_list, name='tree_list'),
     url(r'^workspace/(?P<tree_name>\w+)', tree_views.workspace_new_tree, name='workspace_new_tree'),
-   # url(r'^(?P<tree_id>[0-9]+)/$', tree_views.workspace_update_tree, name='workspace_update_tree')
+   # url(r'^workspace/(?P<tree_id>[0-9]+)', tree_views.workspace_update_tree, name='workspace_update_tree')
 ]

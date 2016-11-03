@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %}{{ title }}{% endblock %}</h1>
+   {% comment %} <h1>{% block title %}{{ title }}{% endblock %}</h1>
     <ol>
         {% for tree in tree_list %}
             <li>{{ tree.name }}</li>
         {% endfor %}
-    </ol>
-
+    </ol>{% endcomment %}
+    <p>
+    {{ jsonstr|linebreaks }}
+    </p>
     <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}">Создать</a>
 
 {% endblock %}

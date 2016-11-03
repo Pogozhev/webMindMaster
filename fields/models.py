@@ -10,11 +10,6 @@ class Field(models.Model):
     def __str__(self):
         return self.name
 
-    def dump(self):
-        """
-        Функция представления объекта в JSON
-        """
-        return '{ "Object" : "' + self.object.dump() + '", ' + '"Property" : "' + self.name + '", "Value" : "' + self.value + '" }'
 
 class FieldManager(models.Manager):
     """

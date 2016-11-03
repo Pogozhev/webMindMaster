@@ -11,12 +11,6 @@ class Object(models.Model):
     def __str__(self):
         return self.name
 
-    def dump(self):
-        """
-        Функция представления объекта в JSON
-        """
-        return '{ "Object" : "' + self.name + '", ' + '"Address" : "' + self.address + '", "Tree" : "' + self.Tree.dump() + '" }'
-
 
 def getObjects(tree):
     """
