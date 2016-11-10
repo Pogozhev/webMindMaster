@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{STATIC_URL|default:"/static/"}}bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/dist/css/bootstrap.css'%}"/>
     <script type="javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
 </head>
 <body>

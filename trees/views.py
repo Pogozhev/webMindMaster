@@ -11,8 +11,8 @@ from django.utils.translation import ugettext as _
 
 # Create your views here.
 def tree_list(request):
-    tree_List = Tree.objects.first()
-    jsonstr = tree2json(tree_List)
+    tree_List = Tree.objects.all()
+    jsonstr = tree2json(tree_List.first())
     title = _('List of trees')
     template = loader.get_template('trees/tree_list.html')
     context1 = {
@@ -37,6 +37,7 @@ def tree2json(tree):
     string += ' \r\n], \r\n}'
     return string
 
+
 def workspace_update_tree(request):
     tree = Tree.objects.get(pk__in=request)
     objects = Object.objects.filter(tree=tree)
@@ -52,21 +53,29 @@ def workspace_update_tree(request):
 
 
 def workspace_new_tree(request, tree_name):
-    user = User.objects.get(username='admin') # need to choose
-    tree = Tree.objects.create(name=tree_name, creator=user)
-    object1 = Object.objects.create(name='root', tree=tree, address='1')
-    object2 = Object.objects.create(name='object 2', tree=tree, address='1.1')
-    field1 = Field.objects.create(name='field 1', value='value 1', object=object1)
-    field2 = Field.objects.create(name='field 2', value='value 2', object=object2)
+    if request.user.is_authenticated():
+        user = User.objects.get(username=request.user)  # need to choose
+        tree = Tree.objects.create(name=tree_name, creator=user)
+        object1 = Object.objects.create(name='root', tree=tree, address='1')
+        object2 = Object.objects.create(name='object 2', tree=tree, address='1.1')
+        field1 = Field.objects.create(name='field 1', value='value 1', object=object1)
+        field2 = Field.objects.create(name='field 2', value='value 2', object=object2)
 
-    objects = [object1, object2]
-    fields = [field1, field2]
+        objects = [object1, object2]
+        fields = [field1, field2]
 
-    template = loader.get_template('workspace/workspace_new_tree.html')
-    context = {
+        template = loader.get_template('workspace/workspace_new_tree.html')
+        context = {
         'tree': tree,
         'objects': objects,
         'fields': fields
-    }
-    return HttpResponse(template.render(context, request))
+        }
+        return HttpResponse(template.render(context, request))
+    else:
+        template = loader.get_template('profile/login.html')
+        return HttpResponse(template.render(request))
 
+
+def delete_tree(request):
+    Tree.objects.filter(pk_inn=request.tree.id).delete()
+    

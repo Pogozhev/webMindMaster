@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   {% comment %} <h1>{% block title %}{{ title }}{% endblock %}</h1>
+   <h1>{% block title %}{{ title }}{% endblock %}</h1>
     <ol>
         {% for tree in tree_list %}
-            <li>{{ tree.name }}</li>
+            <li>{{ tree.name }} &nbsp <a href="{% url 'delete_tree' tree %}" class="btn btn-danger">Удалить</a></li>
         {% endfor %}
-    </ol>{% endcomment %}
+    </ol>
     <p>
     {{ jsonstr|linebreaks }}
     </p>
