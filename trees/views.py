@@ -13,7 +13,8 @@ from django.utils.translation import ugettext as _
 def tree_list(request):
     if request.user.is_authenticated():
         tree_List = Tree.objects.all()
-        jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
+        if (tree_List.count()!=0):
+            jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
         title = "Hello "+request.user.get_username()
         template = loader.get_template('trees/tree_list.html')
         context1 = {
@@ -25,7 +26,7 @@ def tree_list(request):
     else:
         template = loader.get_template('profile/login.html')
         return HttpResponse(template.render(request))
-
+#xmlHttpsRequest ajax
 
 def tree2json(tree):
     string = "";
