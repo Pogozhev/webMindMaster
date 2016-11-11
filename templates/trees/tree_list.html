@@ -4,12 +4,22 @@
    <h1>{% block title %}{{ title }}{% endblock %}</h1>
     <ol>
         {% for tree in tree_list %}
-            <li>{{ tree.name }} &nbsp <a href="{% url 'delete_tree' tree_id=tree.id %}" class="btn btn-danger">Удалить</a></li>
+            <li>{{ tree.name }}
+                &nbsp <a href="{% url 'update_tree' tree_id=tree.id %}" class="btn btn-warning">Редактировать</a>
+                &nbsp <a href="{% url 'delete_tree' tree_id=tree.id %}" class="btn btn-danger">Удалить</a></li>
         {% endfor %}
     </ol>
    {% comment %} <p>
     {{ jsonstr|linebreaks }}
     </p>{% endcomment %}
-    <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}">Создать</a>
+    <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>
+    <br>
+    <input type="button" onclick="a()" value="adgadg" />
 
+    <script>
+    function a(){
+        alert('tree count: ' + {{ tree_list.count }});
+    }
+    </script>
 {% endblock %}
+

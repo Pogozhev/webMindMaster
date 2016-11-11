@@ -28,6 +28,7 @@ def tree_list(request):
         return HttpResponse(template.render(request))
 #xmlHttpsRequest ajax
 
+
 def tree2json(tree):
     string = "";
     string += '{ \r\n "Tree" : \r\n{ ' + '\r\n"name" : "' + tree.name + '", \r\n"user" : "' + tree.creator.username + '", \r\n"create_date": "' + str(tree.create_date)[0:19] + '" \r\n}, \r\n'
@@ -89,5 +90,11 @@ def workspace_new_tree(request, tree_name):
 
 def delete_tree(request, tree_id):
     Tree.objects.filter(pk__in=tree_id).delete()
+    template = loader.get_template('trees/tree_list.html')
+    return HttpResponse(template.render(request))
+
+
+def update_tree(request, tree_id):
+    #Tree.objects.filter(pk__in=tree_id).delete()
     template = loader.get_template('trees/tree_list.html')
     return HttpResponse(template.render(request))
