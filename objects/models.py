@@ -1,5 +1,7 @@
 from django.db import models
-from trees.models import Tree
+from rest_framework import serializers
+
+from trees.models import Tree, TreeSerializer
 
 
 # Create your models here.
@@ -18,3 +20,10 @@ def getObjects(tree):
     """
     objects = Object.objects.filter(tree=tree).order_by('address')
     return objects
+
+
+class ObjectSerializer(serializers.ModelSerializer):
+    tree = TreeSerializer(many=True)
+    class Meta:
+        model = Object
+        fields = ('name', 'tree', 'address')

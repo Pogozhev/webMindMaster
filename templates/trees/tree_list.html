@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <h1>{% block title %}{{ title }}{% endblock %}</h1>
+   <h3>{{ title }}</h3>
+    <hr>
     <ol>
         {% for tree in tree_list %}
             <li>{{ tree.name }}
@@ -12,9 +13,15 @@
    {% comment %} <p>
     {{ jsonstr|linebreaks }}
     </p>{% endcomment %}
+
+    <span>{{ jsonSer|linebreaks }}</span>
+<hR>
+
+
     <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>
     <br>
-    <input type="button" onclick="a()" value="adgadg" />
+
+    {% comment %}<input type="button" onclick="a()" value="adgadg" />{% endcomment %}
 
     <script>
     function a(){

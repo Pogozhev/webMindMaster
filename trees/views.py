@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.contrib.auth.models import User
+from django.core import serializers
 
 from trees.models import Tree
 from objects.models import Object
@@ -13,14 +14,18 @@ from django.utils.translation import ugettext as _
 def tree_list(request):
     if request.user.is_authenticated():
         tree_List = Tree.objects.all()
-        if (tree_List.count()!=0):
-            jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
+        tree2json_exmpl = tree2json(tree_List)
+        json2tree(tree2json_exmpl)
+
+        #if (tree_List.count()!=0):
+        #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
+
         title = "Hello "+request.user.get_username()
         template = loader.get_template('trees/tree_list.html')
         context1 = {
             'tree_list': tree_List,
             'title': title,
-            #'jsonstr': jsonstr
+            'jsonSer': tree2json_exmpl,
         }
         return HttpResponse(template.render(context1, request))
     else:
@@ -28,7 +33,7 @@ def tree_list(request):
         return HttpResponse(template.render(request))
 #xmlHttpsRequest ajax
 
-
+"""
 def tree2json(tree):
     string = "";
     string += '{ \r\n "Tree" : \r\n{ ' + '\r\n"name" : "' + tree.name + '", \r\n"user" : "' + tree.creator.username + '", \r\n"create_date": "' + str(tree.create_date)[0:19] + '" \r\n}, \r\n'
@@ -42,14 +47,41 @@ def tree2json(tree):
         string += ' \r\n], \r\n}'
     string += ' \r\n], \r\n}'
     return string
+"""
 
+def tree2json(tree_id):
+   # tree = Tree.objects.filter(pk__in=tree_id)
+    data_fields_json = "";
+    data_trees_json="";
+    data_objects_json="";
+
+    tree = Tree.objects.all()
+    for tr in tree:
+        object = Object.objects.filter(tree=tr)
+        data_objects_json += serializers.serialize('json', object)
+        for obj in object:
+            field = Field.objects.filter(object=obj)
+            data_fields_json += serializers.serialize('json', field)
+
+    data_in_json = {
+        'tree': data_trees_json,
+        'objects': data_objects_json,
+        'fields': data_fields_json
+    }
+    return data_in_json
+
+
+def json2tree(jsondata):
+    ser = serializers.get_serializer('json')
+    string_data = ser.deserialize('json', jsondata)
+    return string_data
 
 def workspace_update_tree(request):
     if request.user.is_authenticated():
         tree = Tree.objects.get(pk__in=request)
         objects = Object.objects.filter(tree=tree)
         fields = Field.object.field_set(object=objects)
-        jsonstr = tree2json(tree) # Create string in JSON about tree and its objects with fields
+        #jsonstr = tree2json(tree) # Create string in JSON about tree and its objects with fields
 
         template = loader.get_template('workspace/workspace_update_tree.html')
         context = {
@@ -71,7 +103,7 @@ def workspace_new_tree(request, tree_name):
         object2 = Object.objects.create(name='object 2', tree=tree, address='1.1')
         field1 = Field.objects.create(name='field 1', value='value 1', object=object1)
         field2 = Field.objects.create(name='field 2', value='value 2', object=object2)
-        jsonstr = tree2json(tree) # Create string in JSON about tree and its objects with fields
+        #jsonstr = tree2json(tree) # Create string in JSON about tree and its objects with fields
 
         objects = [object1, object2]
         fields = [field1, field2]

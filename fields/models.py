@@ -1,5 +1,7 @@
 from django.db import models
-from objects.models import Object
+from rest_framework import serializers
+
+from objects.models import Object, ObjectSerializer
 
 
 class Field(models.Model):
@@ -23,3 +25,10 @@ class FieldManager(models.Manager):
 def getFields(object):
     fields = Field.objects.filter(object=object)
     return fields
+
+
+class FieldSerializer(serializers.ModelSerializer):
+    object = ObjectSerializer(many=True)
+    class Meta:
+        model = Object
+        fields = ('name', 'value', 'object')
