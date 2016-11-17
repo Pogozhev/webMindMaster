@@ -78,7 +78,7 @@ def json2tree(jsondata):
     return string_data
 
 
-def workspace_update_tree(request):
+def workspace_update_tree(request, tree_id):
     if request.user.is_authenticated():
         tree = Tree.objects.get(pk=request)
         objects = Object.objects.filter(tree=tree)
