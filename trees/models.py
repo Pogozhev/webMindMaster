@@ -1,4 +1,4 @@
-from rest_framework import serializers
+
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
@@ -18,8 +18,3 @@ def getTree(id):
     tree = Tree.objects.filter(pk__in=id)
     return tree
 
-
-class TreeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Tree
-        fields = ('name', 'create_date', 'creator')

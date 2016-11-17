@@ -3,18 +3,24 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.contrib.auth.models import User
 from django.core import serializers
+from rest_framework.renderers import JSONRenderer
 
+from fields.serializers import FieldSerializer
+from objects.serializers import ObjectSerializer
 from trees.models import Tree
 from objects.models import Object
 from fields.models import Field
 
 
 # Create your views here.
+from trees.serializers import TreeSerializer
+
+
 def tree_list(request):
     if request.user.is_authenticated():
         tree_List = Tree.objects.all()
         tree2json_exmpl="";
-        tree2json_exmpl = tree2json(2)
+        tree2json_exmpl = tree2jsonREST(2)
         #json2tree(tree2json_exmpl)
 
         #if (tree_List.count()!=0):
@@ -69,7 +75,6 @@ def tree2json(tree_id):
     }
     return data_in_json
 
-## BIG QUESTION
 def json2tree(jsondata):
     JSONDeser = serializers.get_deserializer("json")
     json_deser = JSONDeser()
@@ -77,12 +82,26 @@ def json2tree(jsondata):
     string_data = json_deser.getvalue()
     return string_data
 
+def tree2jsonREST(tree_id):
+    tree = Tree.objects.filter(pk=tree_id)
+    tree_serializer_data = TreeSerializer(tree)
+    objects = Object.objects.filter(tree=tree)
+    objects_serializer_data = ObjectSerializer(objects)
+    field = Field.objects.filter(object=objects)
+    field_serializer_data = FieldSerializer(field)
+
+    data_in_json = {
+        'tree': tree_serializer_data,
+        'objects': objects_serializer_data,
+        'fields': field_serializer_data
+    }
+    return data_in_json
 
 def workspace_update_tree(request, tree_id):
     if request.user.is_authenticated():
         tree = Tree.objects.get(pk=request)
         objects = Object.objects.filter(tree=tree)
-        fields = Field.object.field_set(object=objects)
+        fields = Field.objects.filter(object=objects)
         #jsonstr = tree2json(tree) # Create string in JSON about tree and its objects with fields
 
         template = loader.get_template('workspace/workspace.html')
