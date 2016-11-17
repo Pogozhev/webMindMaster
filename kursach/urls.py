@@ -22,8 +22,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', tree_views.tree_list, name='tree_list'),
     url(r'^workspace/(?P<tree_name>\w+)', tree_views.workspace_new_tree, name='workspace_new_tree'),
-    # url(r'^login/', profile_views.login_view(), name='login'),
+    #url(r'^login/', profile_views.login_view, name='login'),
+    #url(r'^logout/', profile_views.logout_view, name='logout'),
     url(r'^workspace/(?P<tree_id>[0-9]+)', tree_views.workspace_update_tree, name='workspace_update_tree'),
-    url(r'^delete_tree/(?P<tree_id>[0-9]+)', tree_views.delete_tree, name='delete_tree'),
-    url(r'^update_tree/(?P<tree_id>[0-9]+)', tree_views.update_tree, name='update_tree')
+    #url(r'^delete_tree/(?P<tree_id>[0-9]+)', tree_views.delete_tree, name='delete_tree')
 ]

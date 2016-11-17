@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'fields',
     'trees',
     'objects',
-
 ]
 
 MIDDLEWARE_CLASSES = [

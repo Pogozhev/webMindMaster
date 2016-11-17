@@ -15,9 +15,6 @@ class Object(models.Model):
 
 
 def getObjects(tree):
-    """
-    Функция получения всех объектов выбранного дерева
-    """
     objects = Object.objects.filter(tree=tree).order_by('address')
     return objects
 

@@ -14,10 +14,6 @@ class Field(models.Model):
 
 
 class FieldManager(models.Manager):
-    """
-    Управляющий класс модели, имеет методы:
-    1) создание поля к объекту
-    """
     def create_field(self,name,value,object):
         field = self.create(name=name, value=value, object=object)
 

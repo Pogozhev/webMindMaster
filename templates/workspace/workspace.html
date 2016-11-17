@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <input type="button" value="Сохранить"/>
+
+{% endblock %}
+
+<script>
+    $(function(){
+        alert('tree name: '+{{ tree.name }});
+    })
+</script>
