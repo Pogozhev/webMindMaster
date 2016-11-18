@@ -6,4 +6,4 @@ class FieldSerializer(serializers.ModelSerializer):
     object = ObjectSerializer
     class Meta:
         model = Field
-        fields = ('name', 'value', 'object')
+        fields = '__all__'

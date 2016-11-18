@@ -1,8 +1,7 @@
 from rest_framework import serializers
-from trees.models import *
-from django.contrib.auth.models import User
+from trees.models import Tree
 
-class TreeSerializer(serializers.ModelSerializer):
+class TreeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Tree
-        fields = ('id', 'name','creator','create_date')
+        fields = '__all__'

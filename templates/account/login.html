@@ -2,10 +2,10 @@
 
 {% block content %}
 <center>
-    <form action="login_view">
+    <form action="/account/login/" method="post"> {% csrf_token %}
     <input name="username"/>
     <br>
-    <input name="password"/>
+    <input name="password" type="password" />
     <br>
     <input type="submit" value="Войти"/>
     </form>

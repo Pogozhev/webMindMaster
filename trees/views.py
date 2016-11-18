@@ -1,9 +1,11 @@
+#from django.core.serializers import json
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.contrib.auth.models import User
 from django.core import serializers
 from rest_framework.renderers import JSONRenderer
+import json as simplejson
 
 from fields.serializers import FieldSerializer
 from objects.serializers import ObjectSerializer
@@ -20,8 +22,9 @@ def tree_list(request):
     if request.user.is_authenticated():
         tree_List = Tree.objects.all()
         tree2json_exmpl="";
-        tree2json_exmpl = tree2jsonREST(2)
-        #json2tree(tree2json_exmpl)
+        json2tree_exmpl = "";
+        tree2json_exmpl = tree2json(1)
+        #json2tree_exmpl = json2tree(tree2json_exmpl)
 
         #if (tree_List.count()!=0):
         #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
@@ -32,10 +35,11 @@ def tree_list(request):
             'tree_list': tree_List,
             'title': title,
             'jsonSer': tree2json_exmpl,
+            'jsonDeSer': json2tree_exmpl,
         }
         return HttpResponse(template.render(context1, request))
     else:
-        template = loader.get_template('profile/login.html')
+        template = loader.get_template('account/login.html')
         return HttpResponse(template.render(request))
 #xmlHttpsRequest ajax
 
@@ -59,8 +63,12 @@ def tree2json(tree_id):
     data_fields_json = "";
     data_objects_json="";
 
-    tree = Tree.objects.filter(pk=tree_id)
-
+    tree = Tree.objects.first()
+    data_trees_json=""
+    data_objects_json=""
+    data_fields_json=""
+    string=""
+    """
     data_trees_json = serializers.serialize("json", tree)
     object = Object.objects.filter(tree=tree)
     data_objects_json += serializers.serialize('json', object)
@@ -68,23 +76,29 @@ def tree2json(tree_id):
         field = Field.objects.filter(object=obj)
         data_fields_json += serializers.serialize('json', field)
 
+    string = ""
+    string = tree_json = simplejson.dump(tree)
+    json_tree = simplejson.loads(tree_json)
+    string = "\n" + json_tree.name"""
+
+   #string = data_trees_json + data_objects_json + data_fields_json
+
     data_in_json = {
         'tree': data_trees_json,
         'objects': data_objects_json,
         'fields': data_fields_json
     }
-    return data_in_json
+    return string
 
-def json2tree(jsondata):
-    JSONDeser = serializers.get_deserializer("json")
-    json_deser = JSONDeser()
-    json_deser.deserialize(jsondata)
-    string_data = json_deser.getvalue()
-    return string_data
+"""def json2tree(jsondata):
+    parsed_string = pythonJson.loads(jsondata)
+    string = parsed_string["tree"]
+    return string"""
 
 def tree2jsonREST(tree_id):
-    tree = Tree.objects.filter(pk=tree_id)
-    tree_serializer_data = TreeSerializer(tree)
+    #tree = Tree.objects.filter(pk=tree_id)
+    tree = Tree.objects.first()
+    tree_serializer_data = TreeSerializer(tree).data
     objects = Object.objects.filter(tree=tree)
     objects_serializer_data = ObjectSerializer(objects)
     field = Field.objects.filter(object=objects)
@@ -112,7 +126,7 @@ def workspace_update_tree(request, tree_id):
         }
         return HttpResponse(template.render(context, request))
     else:
-        template = loader.get_template('profile/login.html')
+        template = loader.get_template('account/login.html')
         return HttpResponse(template.render(request))
 
 
@@ -137,7 +151,7 @@ def workspace_new_tree(request, tree_name):
         }
         return HttpResponse(template.render(context, request))
     else:
-        template = loader.get_template('profile/login.html')
+        template = loader.get_template('account/login.html')
         return HttpResponse(template.render(request))
 
 

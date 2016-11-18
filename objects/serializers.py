@@ -6,4 +6,4 @@ class ObjectSerializer(serializers.ModelSerializer):
     tree = TreeSerializer
     class Meta:
         model = Object
-        fields = ('name','address','tree')
+        fields = '__all__'

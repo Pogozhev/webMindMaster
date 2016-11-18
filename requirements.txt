@@ -1,3 +1,5 @@
+simplejson
+easy_json
 Django==1.10.1
 flake8==3.0.4
 mccabe==0.5.2
