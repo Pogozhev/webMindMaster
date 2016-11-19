@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth.views import login,logout
@@ -43,4 +45,4 @@ urlpatterns = [
     url(r'^delete_field/(?P<tree_id>[0-9]+)', field_views.deleteField, name='delete_field'),
     url(r'^update_field/(?P<tree_id>[0-9]+)', field_views.updateField, name='update_field'),
     url(r'^get_field/(?P<tree_id>[0-9]+)', field_views.getField, name='get_field'),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

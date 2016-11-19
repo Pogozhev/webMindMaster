@@ -34,7 +34,7 @@ def tree_list(request):
         #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
 
         title = "Hello, " + request.user.get_username()
-        template = loader.get_template('trees/tree_list.html')
+        template = loader.get_template('webmindmaster/index.html')
         context1 = {
             'tree_list': tree_List,
             'title': title,

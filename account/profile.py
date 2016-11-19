@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login, logout
 from django.forms import Form
-from django.http import HttpResponse
-from django.shortcuts import redirect, render_to_response
+from django.http import HttpResponse, request
+from django.shortcuts import redirect, render_to_response, render
 from django.template import RequestContext
 from django.template import loader
 from django.views.decorators.csrf import csrf_protect, requires_csrf_token, csrf_exempt
@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 def login_view():
     template = loader.get_template('account/login.html')
-    return HttpResponse(template.render())
+    return render(request, "account/login.html")
 
 def login_view(request):
     username = request.POST['username']
