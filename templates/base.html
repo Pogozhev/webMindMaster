@@ -12,11 +12,28 @@
 </head>
 <body>
 <div class = "page-header">
-<span>header</span>
-    <div>
-        <a href="{% url 'logout' %}">Выйти</a>
-    </div>
+
 </div>
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div style="padding-top: 10px">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'logout' %}" class="btn btn-primary">Выйти</a>
+                        {% endif %}
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 <div class="panel-body"><br>
     {% block content %}
@@ -25,7 +42,7 @@
 </div>
 
 <div class = "panel-footer">
-<span>footer</span>
-    </div>
+    <p>&copy; 2016 – webTreeMaster</p>
+</div>
 </body>
 </html>

@@ -12,7 +12,9 @@ from objects.serializers import ObjectSerializer
 from trees.models import Tree
 from objects.models import Object
 from fields.models import Field
+import logging
 
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 from trees.serializers import TreeSerializer
@@ -23,13 +25,15 @@ def tree_list(request):
         tree_List = Tree.objects.all()
         tree2json_exmpl="";
         json2tree_exmpl = "";
-        tree2json_exmpl = tree2json(1)
+        #tree2json_exmpl = tree2json(2)
+        #for jsonStr in tree2json_exmpl:
+         #   json2tree_exmpl += json2tree(jsonStr)
         #json2tree_exmpl = json2tree(tree2json_exmpl)
 
         #if (tree_List.count()!=0):
         #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
 
-        title = "Hello " + request.user.get_username()
+        title = "Hello, " + request.user.get_username()
         template = loader.get_template('trees/tree_list.html')
         context1 = {
             'tree_list': tree_List,
@@ -37,11 +41,24 @@ def tree_list(request):
             'jsonSer': tree2json_exmpl,
             'jsonDeSer': json2tree_exmpl,
         }
+        logger.info("User: " + request.user.username + " got trees")
         return HttpResponse(template.render(context1, request))
     else:
         template = loader.get_template('account/login.html')
         return HttpResponse(template.render(request))
 #xmlHttpsRequest ajax
+
+def newTree(request, tree_id):
+    logger.info("User: " + request.user.username + " created new tree: " + tree_id)
+
+def updateTree(request, tree_id):
+    logger.info("User: " + request.user.username + " updated tree: " + tree_id)
+
+def deleteTree(request, tree_id):
+    logger.info("User: " + request.user.username + " deleted tree: " + tree_id)
+
+def getTree(request, tree_id):
+    logger.info("User: " + request.user.username + " got tree: " + tree_id)
 
 """
 def tree2json(tree):
@@ -63,37 +80,43 @@ def tree2json(tree_id):
     data_fields_json = "";
     data_objects_json="";
 
-    tree = Tree.objects.first()
+    tree = Tree.objects.all()
     data_trees_json=""
     data_objects_json=""
     data_fields_json=""
     string=""
-    """
+
     data_trees_json = serializers.serialize("json", tree)
     object = Object.objects.filter(tree=tree)
     data_objects_json += serializers.serialize('json', object)
     for obj in object:
         field = Field.objects.filter(object=obj)
         data_fields_json += serializers.serialize('json', field)
-
+    '''
     string = ""
     string = tree_json = simplejson.dump(tree)
     json_tree = simplejson.loads(tree_json)
-    string = "\n" + json_tree.name"""
+    string = "\n" + json_tree.name'''
 
-   #string = data_trees_json + data_objects_json + data_fields_json
+    string_tree = str(data_trees_json)
+    string_object = str(data_objects_json)
+    string_field = str(data_fields_json)
 
     data_in_json = {
         'tree': data_trees_json,
         'objects': data_objects_json,
         'fields': data_fields_json
     }
+    return (string_tree, string_object, string_field)
+
+
+def json2tree(jsondata):
+    objects = serializers.deserialize("json", jsondata)
+    string = "";
+    for obj in objects:
+        string += str(obj)
     return string
 
-"""def json2tree(jsondata):
-    parsed_string = pythonJson.loads(jsondata)
-    string = parsed_string["tree"]
-    return string"""
 
 def tree2jsonREST(tree_id):
     #tree = Tree.objects.filter(pk=tree_id)
@@ -110,6 +133,7 @@ def tree2jsonREST(tree_id):
         'fields': field_serializer_data
     }
     return data_in_json
+
 
 def workspace_update_tree(request, tree_id):
     if request.user.is_authenticated():
