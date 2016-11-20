@@ -7,11 +7,11 @@
     <hr>
     <ol>
         {% for tree in tree_list %}
-            <li>{{ tree.name }}
+            {% comment %}<li>{{ tree.name }}
                 &nbsp <a href="{% url 'workspace_update_tree' tree_id=tree.id %}" class="btn btn-warning">Редактировать</a>
             {% if user.is_superuser %}
                 &nbsp <a href="{% url 'delete_tree' tree_id=tree.id %}" class="btn btn-danger">Удалить</a></li>
-            {% endif %}
+            {% endif %}{% endcomment %}
         {% endfor %}
     </ol>
    {% comment %} <p>
@@ -23,7 +23,7 @@
 <span>{{ jsonDeSer|linebreaks }}</span>
 
 
-    <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>
+   {% comment %} <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>{% endcomment %}
     <br>
 
     {% comment %}<input type="button" onclick="a()" value="adgadg" />{% endcomment %}

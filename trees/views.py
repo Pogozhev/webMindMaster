@@ -1,5 +1,6 @@
 #from django.core.serializers import json
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.contrib.auth.models import User
@@ -42,10 +43,11 @@ def tree_list(request):
             'jsonDeSer': json2tree_exmpl,
         }
         logger.info("User: " + request.user.username + " got trees")
-        return HttpResponse(template.render(context1, request))
+        #return render(request, 'webmindmaster/index.html', context1)
+        return render(request, 'trees/tree_list.html', context1)
     else:
-        template = loader.get_template('account/login.html')
-        return HttpResponse(template.render(request))
+        #template = loader.get_template('account/login.html')
+        return render(request, 'account/login.html')
 #xmlHttpsRequest ajax
 
 def newTree(request, tree_id):
@@ -180,7 +182,8 @@ def workspace_new_tree(request, tree_name):
 
 
 def delete_tree(request, tree_id):
-    Tree.objects.filter(pk__in=tree_id).delete()
-    template = loader.get_template('trees/tree_list.html')
-    return HttpResponse(template.render(request))
+    Tree.objects.filter(pk=tree_id).delete()
+    #template = loader.get_template('trees/tree_list.html')
+    #return HttpResponse(template.render(request))
+    return HttpResponseRedirect('tree_list')
 

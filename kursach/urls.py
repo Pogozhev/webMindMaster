@@ -21,6 +21,7 @@ from django.contrib.auth.views import login,logout
 from trees import views as tree_views
 from objects import views as object_views
 from fields import views as field_views
+from account import profile as account_views
 
 urlpatterns = [
     url(r'^workspace/(?P<tree_name>\w+)', tree_views.workspace_new_tree, name='workspace_new_tree'),
@@ -28,8 +29,9 @@ urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
     url(r'^$', tree_views.tree_list, name='tree_list'),
-    url(r'^account/login/$', login, name='login'),
-    url(r'^account/logout/$', logout, name='logout'),
+    url(r'^tree_list/', tree_views.tree_list, name='tree_list'),
+    url(r'^login', account_views.login_view, name='login'),
+    url(r'^logout', account_views.logout_view, name='logout'),
 
     url(r'^new_tree/(?P<tree_id>[0-9]+)', tree_views.newTree, name='new_tree'),
     url(r'^delete_tree/(?P<tree_id>[0-9]+)', tree_views.deleteTree, name='delete_tree'),
@@ -45,4 +47,4 @@ urlpatterns = [
     url(r'^delete_field/(?P<tree_id>[0-9]+)', field_views.deleteField, name='delete_field'),
     url(r'^update_field/(?P<tree_id>[0-9]+)', field_views.updateField, name='update_field'),
     url(r'^get_field/(?P<tree_id>[0-9]+)', field_views.getField, name='get_field'),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
