@@ -11,28 +11,29 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 def login_view(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        login(request,user)
-        #template = loader.get_template(request, 'trees/tree_list.html')
-        #form = Form(request.POST)
-        logger.info("User :" + username + " login")
-        #return render_to_response('trees/tree_list.html', RequestContext(request))
-        #return redirect(request, 'trees/tree_list.html')
-        return HttpResponseRedirect('tree_list')
+    if request.GET:
+        return render(request, 'account/login.html')
     else:
-        logger.error("User :" + username + " try to login")
-        #return redirect(request, 'account/login.html')
-        #return render_to_response('account/login.html', RequestContext(request))
-        return HttpResponseRedirect('login')
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if (not user):
+            context = {
+                'error': "Error login or password"
+            }
+            return render(request, 'account/login.html', context)
+        else:
+            if user is not None:
+                login(request,user)
+                logger.info("User :" + username + " login")
+                return HttpResponseRedirect('tree_list')
+            else:
+                logger.error("User :" + username + " try to login")
+                return HttpResponseRedirect('login')
 
 
 def logout_view(request):
     logout(request)
-    template = loader.get_template('account/login.html')
     logger.info("User :" + request.user.username + " login")
-    return HttpResponse(template.render())
+    return HttpResponseRedirect('tree_list')

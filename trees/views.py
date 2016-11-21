@@ -1,4 +1,5 @@
 #from django.core.serializers import json
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -20,35 +21,35 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 from trees.serializers import TreeSerializer
 
-
+@login_required
 def tree_list(request):
-    if request.user.is_authenticated():
-        tree_List = Tree.objects.all()
-        tree2json_exmpl="";
-        json2tree_exmpl = "";
-        #tree2json_exmpl = tree2json(2)
-        #for jsonStr in tree2json_exmpl:
-         #   json2tree_exmpl += json2tree(jsonStr)
-        #json2tree_exmpl = json2tree(tree2json_exmpl)
+    tree_List = Tree.objects.all()
+    tree2json_exmpl="";
+    json2tree_exmpl = "";
+    #tree2json_exmpl = tree2json(2)
+    #for jsonStr in tree2json_exmpl:
+    #   json2tree_exmpl += json2tree(jsonStr)
+    #json2tree_exmpl = json2tree(tree2json_exmpl)
 
-        #if (tree_List.count()!=0):
-        #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
+    #if (tree_List.count()!=0):
+    #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
 
-        title = "Hello, " + request.user.get_username()
-        template = loader.get_template('webmindmaster/index.html')
-        context1 = {
-            'tree_list': tree_List,
-            'title': title,
-            'jsonSer': tree2json_exmpl,
-            'jsonDeSer': json2tree_exmpl,
-        }
-        logger.info("User: " + request.user.username + " got trees")
-        #return render(request, 'webmindmaster/index.html', context1)
-        return render(request, 'trees/tree_list.html', context1)
-    else:
-        #template = loader.get_template('account/login.html')
-        return render(request, 'account/login.html')
+    title = "Hello, " + request.user.get_username()
+    template = loader.get_template('webmindmaster/index.html')
+    context1 = {
+        'tree_list': tree_List,
+        'title': title,
+        'jsonSer': tree2json_exmpl,
+        'jsonDeSer': json2tree_exmpl,
+    }
+    logger.info("User: " + request.user.username + " got trees")
+    #return render(request, 'webmindmaster/index.html', context1)
+    return render(request, 'trees/tree_list.html', context1)
 #xmlHttpsRequest ajax
+
+def mindmap(request):
+    return render(request, 'webmindmaster/index.html')
+
 
 def newTree(request, tree_id):
     logger.info("User: " + request.user.username + " created new tree: " + tree_id)
@@ -171,9 +172,9 @@ def workspace_new_tree(request, tree_name):
 
         template = loader.get_template('workspace/workspace.html')
         context = {
-        'tree': tree,
-        'objects': objects,
-        'fields': fields
+            'tree': tree,
+            'objects': objects,
+            'fields': fields
         }
         return HttpResponse(template.render(context, request))
     else:

@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^tree_list/', tree_views.tree_list, name='tree_list'),
     url(r'^login', account_views.login_view, name='login'),
     url(r'^logout', account_views.logout_view, name='logout'),
+    url(r'^mindmap', tree_views.mindmap, name='mindmap'),
 
     url(r'^new_tree/(?P<tree_id>[0-9]+)', tree_views.newTree, name='new_tree'),
     url(r'^delete_tree/(?P<tree_id>[0-9]+)', tree_views.deleteTree, name='delete_tree'),

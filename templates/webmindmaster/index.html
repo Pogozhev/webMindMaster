@@ -1,27 +1,43 @@
-﻿<html>
+﻿  {% extends 'base.html' %}
+{% comment %} {% load static %}
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <script src="/js/jquery.min.js"></script>
+
     <title>jsPlumb Toolkit</title>
-    <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/gollum-template.css' %}"/>
+     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-defaults.css' %}"/>
+     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-demo.css' %}"/>
+     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/app.css' %}"/>
+     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/index.css' %}"/>
+    <script type="javascript" src="{%  static 'mindmaster/js/jquery.min.js' %}"></script>{% endcomment %}
+
+ {% comment %} <link href="/css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+     <script src="/js/jquery.min.js"></script>
     <link href="/css/gollum-template.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jsPlumbToolkit-defaults.css">
     <link rel="stylesheet" href="css/jsPlumbToolkit-demo.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/index.css"/>
-</head>
+    <link rel="stylesheet" href="css/index.css"/>{% endcomment %}
 
-<body>
+{% comment %}</head>{% endcomment %}
+
+
+
+{% block content %}
+
 <div id="mindmap">
 
     <div id="mindmap-main">
-        <div id="function-bar">
+
+        {% comment %}<div id="function-bar">
             <div id="toolbar">
                 <span id="node-plus" class="toolbar-btn glyphicon glyphicon-plus plus-active"></span>
                 <!--
@@ -42,20 +58,24 @@
                 <input class="form-control" type="text"/>
                 <button class="btn btn-default btn-sm">rename</button>
             </div>
+        </div>{% endcomment %}
 
+
+        <div id="mindmap-canvas">
 
         </div>
-
-
-        <div id="mindmap-canvas"></div>
 
     </div>
 
 </div>
 
+{% endblock %}
 
 
+{% comment %}
+
+<body>
 
 </body>
 
-</html>
+</html>{% endcomment %}
