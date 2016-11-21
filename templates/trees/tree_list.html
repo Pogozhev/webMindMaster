@@ -24,6 +24,7 @@
 <hr>
 <span>{{ jsonDeSer|linebreaks }}</span>
 
+<input type="button" value="Run ajax Example" id="but" name="but" onclick="ajaxexmpl()"/>
 
    {% comment %} <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>{% endcomment %}
     <br>
@@ -32,6 +33,21 @@
 </div>
 </div>
     <script>
+
+    function ajaxexmpl(){
+        alert('Вызов функции ajax');
+        $.ajax({
+            url : "/ajaxExmpl/",
+            type : "POST",
+            data : { 'the_post' : 'the_post' },
+            dataType: 'json',
+            success: function (data) {
+                alert(data.post_text);
+            }
+    })
+    }
+
+
     function a(){
         alert('tree count: ' + {{ tree_list.count }});
     }

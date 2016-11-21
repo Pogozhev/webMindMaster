@@ -22,6 +22,7 @@ def login_view(request):
             context = {
                 'error': "Error login or password"
             }
+            logger.error("User :" + username + " try to login")
             return render(request, 'account/login.html', context)
         else:
             if user is not None:

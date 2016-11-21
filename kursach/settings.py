@@ -160,7 +160,7 @@ LOGGING = {
         },
     },
     'loggers': {
-        '': {
+        'account': {
             'handlers': ['default'],
             'level': 'DEBUG',
             'propagate': True

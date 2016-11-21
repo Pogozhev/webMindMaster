@@ -1,4 +1,6 @@
 #from django.core.serializers import json
+import json
+
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
@@ -50,6 +52,11 @@ def tree_list(request):
 def mindmap(request):
     return render(request, 'webmindmaster/index.html')
 
+
+def ajaxExmpl(request):
+    r = {}
+    r['post_text'] = request.POST.get('the_post') + ' example txet from back end'
+    return HttpResponse(json.dumps(r), content_type="application/json")
 
 def newTree(request, tree_id):
     logger.info("User: " + request.user.username + " created new tree: " + tree_id)
