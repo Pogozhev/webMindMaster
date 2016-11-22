@@ -26,6 +26,8 @@
 
 <input type="button" value="Run ajax Example" id="but" name="but" onclick="ajaxexmpl()"/>
 
+<input type="button" value="Run ajax Example" id="but" name="but" onclick="log_add_tree(1)"/>
+
    {% comment %} <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>{% endcomment %}
     <br>
 
@@ -46,6 +48,117 @@
             }
     })
     }
+
+    function log_add_tree(tree_id){
+        $.ajax({
+            url : "/new_tree/"+tree_id,
+            type : "POST",
+            data : { 'tree_id' : tree_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_get_tree(tree_id){
+        $.ajax({
+            url : "/get_tree/"+tree_id,
+            type : "POST",
+            data : { 'tree_id' : tree_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_delete_tree(tree_id){
+        $.ajax({
+            url : "/delete_tree/"+tree_id,
+            type : "POST",
+            data : { 'tree_id' : tree_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_update_tree(tree_id){
+        $.ajax({
+            url : "/update_tree/"+tree_id,
+            type : "POST",
+            data : { 'tree_id' : tree_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_add_object(object_id){
+        $.ajax({
+            url : "/new_object/"+object_id,
+            type : "POST",
+            data : { 'object_id' : object_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_get_object(object_id){
+        $.ajax({
+            url : "/get_object/"+object_id,
+            type : "POST",
+            data : { 'object_id' : object_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_delete_object(object_id){
+        $.ajax({
+            url : "/delete_object/"+object_id,
+            type : "POST",
+            data : { 'object_id' : object_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_update_object(object_id){
+        $.ajax({
+            url : "/update_object/"+object_id,
+            type : "POST",
+            data : { 'object_id' : object_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_add_field(field_id){
+        $.ajax({
+            url : "/new_field/"+field_id,
+            type : "POST",
+            data : { 'field_id' : field_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_get_field(field_id){
+        $.ajax({
+            url : "/get_field/"+field_id,
+            type : "POST",
+            data : { 'field_id' : field_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_delete_field(field_id){
+        $.ajax({
+            url : "/delete_field/"+field_id,
+            type : "POST",
+            data : { 'field_id' : field_id },
+            dataType: 'json'
+    })
+    }
+
+    function log_update_field(field_id){
+        $.ajax({
+            url : "/update_field/"+field_id,
+            type : "POST",
+            data : { 'field_id' : field_id },
+            dataType: 'json'
+    })
+    }
+
+
+
 
 
     function a(){

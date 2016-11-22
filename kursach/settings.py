@@ -165,6 +165,21 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True
         },
+        'trees': {
+            'handlers': ['default'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+        'objects': {
+            'handlers': ['default'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+        'fields': {
+            'handlers': ['default'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
         'django.request': {
             'handlers': ['request_handler'],
             'level': 'DEBUG',

@@ -60,15 +60,19 @@ def ajaxExmpl(request):
 
 def newTree(request, tree_id):
     logger.info("User: " + request.user.username + " created new tree: " + tree_id)
+    return HttpResponse(request)
 
 def updateTree(request, tree_id):
     logger.info("User: " + request.user.username + " updated tree: " + tree_id)
+    return HttpResponse(request)
 
 def deleteTree(request, tree_id):
     logger.info("User: " + request.user.username + " deleted tree: " + tree_id)
+    return HttpResponse(request)
 
 def getTree(request, tree_id):
     logger.info("User: " + request.user.username + " got tree: " + tree_id)
+    return HttpResponse(request)
 
 """
 def tree2json(tree):

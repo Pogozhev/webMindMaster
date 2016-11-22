@@ -1,2 +1,7 @@
 2016-11-21 18:55:23,845 [INFO] account.profile: User : login
 2016-11-21 18:55:29,261 [INFO] account.profile: User :admin login
+2016-11-22 14:45:07,372 [INFO] trees.views: User: admin got trees
+2016-11-22 14:45:26,147 [INFO] trees.views: User: admin created new tree: 1
+2016-11-22 14:45:45,470 [INFO] trees.views: User: admin created new tree: 1
+2016-11-22 14:46:00,051 [INFO] trees.views: User: admin got trees
+2016-11-22 14:46:02,457 [INFO] trees.views: User: admin created new tree: 1
