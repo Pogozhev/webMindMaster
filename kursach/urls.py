@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls import url, include
+from django.conf.urls import url, include, i18n
 from django.contrib import admin
 from django.contrib.auth.views import login,logout
 from trees import views as tree_views
@@ -34,6 +34,7 @@ urlpatterns = [
     url(r'^logout', account_views.logout_view, name='logout'),
     url(r'^mindmap', tree_views.mindmap, name='mindmap'),
     url(r'^ajaxExmpl/$', tree_views.ajaxExmpl),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
 
     url(r'^new_tree/(?P<tree_id>[0-9]+)', tree_views.newTree, name='new_tree'),
     url(r'^delete_tree/(?P<tree_id>[0-9]+)', tree_views.deleteTree, name='delete_tree'),

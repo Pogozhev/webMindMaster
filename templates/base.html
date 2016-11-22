@@ -1,27 +1,27 @@
 
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{%  static 'bootstrap/dist/css/bootstrap.css' %}"/>
-    <script type="javascript" src="{%  static 'jquery/dist/jquery.min.js' %}"></script>
 
-<link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{%  static 'bootstrap/dist/css/bootstrap.css' %}"/>
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/main.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/gollum-template.css' %}"/>
-     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-defaults.css' %}"/>
-     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-demo.css' %}"/>
-     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/app.css' %}"/>
-     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/index.css' %}"/>
-    <script type="javascript" src="{%  static 'mindmaster/js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-defaults.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-demo.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/app.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/index.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
-    {% comment %}<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>{% endcomment %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <script>
 
@@ -51,10 +51,6 @@
 
 </head>
 <body>
-<div class = "page-header">
-
-</div>
-
 
 <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -63,33 +59,12 @@
                  <ul class="nav navbar-nav navbar-right">
                     <li>
                         <div style="padding-top: 10px">
-                            <a href="{% url 'tree_list' %}"  class="btn btn-primary">Home page</a>
+                            <a href="{% url 'tree_list' %}"  class="btn btn-primary">{% trans "Home page" %}</a>
                         </div>
                     </li>
                      <li>
                          <div style="width: 500px; padding-top: 10px">
-                            <div id="function-bar">
-                                <div id="toolbar">
-                                    <span id="node-plus" class="toolbar-btn glyphicon glyphicon-plus plus-active"></span>
-                <!--
-                <span id="node-more" class="toolbar-btn glyphicon glyphicon-tasks"></span>
-                <span id="node-info" class="toolbar-btn glyphicon glyphicon-list-alt"></span>
-                -->
-                                    <span id="node-cancel" class="toolbar-btn glyphicon glyphicon-remove"></span>
-                                </div>
-                                <div id="tip-box">
-                        <div class="tip-wrapper">
-                       <span class="tip-triangle"></span>
-                       <span class="tip-label"></span>
-                   </div>
 
-                </div>
-
-                    <div id="label-group">
-                        <input class="form-control" type="text"/>
-                        <button class="btn btn-default btn-sm">rename</button>
-                    </div>
-                        </div>
                         </div>
                      </li>
                      </ul>
@@ -98,6 +73,27 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="dropdown" style="padding-top: 10px">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        {% trans "Choose language" %}
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang in LANGUAGES %}
+                            <li>
+                            <form name="setLang{{ lang.1}}" action="/i18n/setlang/" method="POST">
+	                        {% csrf_token %}
+	                        <input name="next" type="hidden" value="/">
+	                        <input type="hidden" name="language" value="{{ lang.0 }}">
+	                        <a href="#" onclick="document.setLang{{ lang.1 }}.submit(); return false;" class="btn">{{ lang.1 }}</a>
+	                        </form>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </li>
                 <li>
                     <div style="padding-top: 10px">
                         {% if user.is_authenticated %}
@@ -109,6 +105,13 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
 
 <div class="panel-body"><br>
     {% block content %}

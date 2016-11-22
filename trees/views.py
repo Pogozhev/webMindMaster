@@ -17,6 +17,7 @@ from trees.models import Tree
 from objects.models import Object
 from fields.models import Field
 import logging
+from django.utils.translation import ugettext_lazy as _
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +37,7 @@ def tree_list(request):
     #if (tree_List.count()!=0):
     #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
 
-    title = "Hello, " + request.user.get_username()
+    title = _("Hello, ") + request.user.get_username()
     template = loader.get_template('webmindmaster/index.html')
     context1 = {
         'tree_list': tree_List,
