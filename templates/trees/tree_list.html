@@ -25,8 +25,23 @@
 <span>{{ jsonDeSer|linebreaks }}</span>
 
 <input type="button" value="Run ajax Example" id="but" name="but" onclick="ajaxexmpl()"/>
+<hr>
 
-<input type="button" value="Run ajax Example" id="but" name="but" onclick="log_add_tree(1)"/>
+<input type="button" value="log_add_tree"  name="but" onclick="log_add_tree(1)"/>
+<input type="button" value="log_get_tree"  name="but" onclick="log_get_tree(1)"/>
+<input type="button" value="log_delete_tree"  name="but" onclick="log_delete_tree(1)"/>
+<input type="button" value="log_update_tree"  name="but" onclick="log_update_tree(1)"/>
+<hr>
+<input type="button" value="log_get_object"  name="but" onclick="log_get_object(1)"/>
+<input type="button" value="log_delete_object"  name="but" onclick="log_delete_object(1)"/>
+<input type="button" value="log_update_object"  name="but" onclick="log_update_object(1)"/>
+<input type="button" value="log_add_object"  name="but" onclick="log_add_object(1)"/>
+<hr>
+<input type="button" value="log_get_field"  name="but" onclick="log_get_field(1)"/>
+<input type="button" value="log_delete_field"  name="but" onclick="log_delete_field(1)"/>
+<input type="button" value="log_update_field"  name="but" onclick="log_update_field(1)"/>
+<input type="button" value="log_add_field"  name="but" onclick="log_add_field(1)"/>
+
 
    {% comment %} <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>{% endcomment %}
     <br>

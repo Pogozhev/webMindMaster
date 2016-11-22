@@ -5,3 +5,18 @@
 2016-11-22 14:45:45,470 [INFO] trees.views: User: admin created new tree: 1
 2016-11-22 14:46:00,051 [INFO] trees.views: User: admin got trees
 2016-11-22 14:46:02,457 [INFO] trees.views: User: admin created new tree: 1
+2016-11-22 14:52:43,917 [INFO] trees.views: User: admin created new tree: 1
+2016-11-22 15:35:57,052 [INFO] trees.views: User: admin got trees
+2016-11-22 15:36:07,196 [INFO] trees.views: User: admin created new tree: 1
+2016-11-22 15:36:07,585 [INFO] trees.views: User: admin got tree: 1
+2016-11-22 15:36:07,920 [INFO] trees.views: User: admin deleted tree: 1
+2016-11-22 15:36:08,255 [INFO] trees.views: User: admin updated tree: 1
+2016-11-22 15:37:18,875 [INFO] trees.views: User: admin got trees
+2016-11-22 15:37:24,469 [INFO] objects.views: User: admin got object: 1
+2016-11-22 15:37:27,777 [INFO] objects.views: User: admin deleted object: 1
+2016-11-22 15:37:28,089 [INFO] objects.views: User: admin updated object: 1
+2016-11-22 15:37:28,400 [INFO] objects.views: User: admin created new object: 1
+2016-11-22 15:37:28,999 [INFO] fields.views: User: admin got field: 1
+2016-11-22 15:37:29,281 [INFO] fields.views: User: admin deleted field: 1
+2016-11-22 15:37:29,609 [INFO] fields.views: User: admin updated field: 1
+2016-11-22 15:37:29,911 [INFO] fields.views: User: admin created new field: 1

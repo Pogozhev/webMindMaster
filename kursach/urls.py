@@ -40,13 +40,13 @@ urlpatterns = [
     url(r'^update_tree/(?P<tree_id>[0-9]+)', tree_views.updateTree, name='update_tree'),
     url(r'^get_tree/(?P<tree_id>[0-9]+)', tree_views.getTree, name='get_tree'),
 
-    url(r'^new_object/(?P<tree_id>[0-9]+)', object_views.newObject, name='new_object'),
-    url(r'^delete_object/(?P<tree_id>[0-9]+)', object_views.deleteObject, name='delete_object'),
-    url(r'^update_object/(?P<tree_id>[0-9]+)', object_views.updateObject, name='update_object'),
-    url(r'^get_object/(?P<tree_id>[0-9]+)', object_views.getObject, name='get_object'),
+    url(r'^new_object/(?P<object_id>[0-9]+)', object_views.newObject, name='new_object'),
+    url(r'^delete_object/(?P<object_id>[0-9]+)', object_views.deleteObject, name='delete_object'),
+    url(r'^update_object/(?P<object_id>[0-9]+)', object_views.updateObject, name='update_object'),
+    url(r'^get_object/(?P<object_id>[0-9]+)', object_views.getObject, name='get_object'),
 
-    url(r'^new_field/(?P<tree_id>[0-9]+)', field_views.newField, name='new_field'),
-    url(r'^delete_field/(?P<tree_id>[0-9]+)', field_views.deleteField, name='delete_field'),
-    url(r'^update_field/(?P<tree_id>[0-9]+)', field_views.updateField, name='update_field'),
-    url(r'^get_field/(?P<tree_id>[0-9]+)', field_views.getField, name='get_field'),
+    url(r'^new_field/(?P<field_id>[0-9]+)', field_views.newField, name='new_field'),
+    url(r'^delete_field/(?P<field_id>[0-9]+)', field_views.deleteField, name='delete_field'),
+    url(r'^update_field/(?P<field_id>[0-9]+)', field_views.updateField, name='update_field'),
+    url(r'^get_field/(?P<field_id>[0-9]+)', field_views.getField, name='get_field'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
