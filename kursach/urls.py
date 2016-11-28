@@ -20,5 +20,4 @@ from trees import views as tree_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', tree_views.tree_list, name='tree_list'),
-    url(r'^workspace/', )
 ]
