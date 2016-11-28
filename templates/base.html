@@ -14,6 +14,9 @@
     <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+
     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/main.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/gollum-template.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-defaults.css' %}"/>
@@ -51,6 +54,7 @@
 
 </head>
 <body>
+
 
 <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -106,21 +110,26 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-<div class="panel-body"><br>
+{% comment %}<div class="panel-body" style="padding-top: 40px">
+    <br>
     {% block content %}
     {% endblock %}
 <br>
-</div>
+</div>{% endcomment %}
+
+{% block content %}
+    {% endblock %}
 
 <div class = "panel-footer">
     <p>&copy; 2016 – webTreeMaster</p>
 </div>
+
+<script src="{%  static 'mindmaster/lib/jsPlumb-2.2.3.js' %}"></script>
+<script src="{%  static 'mindmaster/lib/jsPlumbToolkit-1.1.0.js' %}"></script>
+<script src="{%  static 'mindmaster/lib/demo-support.js' %}"></script>
+<script src="{%  static 'mindmaster/app.js' %}"></script>
+
 </body>
 </html>
+
+

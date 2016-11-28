@@ -7,22 +7,17 @@
     <hr>
     <ol>
         {% for tree in tree_list %}
-            {% comment %}<li>{{ tree.name }}
-                &nbsp <a href="{% url 'workspace_update_tree' tree_id=tree.id %}" class="btn btn-warning">Редактировать</a>
-            {% if user.is_superuser %}
-                &nbsp <a href="{% url 'delete_tree' tree_id=tree.id %}" class="btn btn-danger">Удалить</a></li>
-            {% endif %}{% endcomment %}
+            <a href="{% url 'mindmapview' tree_id=tree.id %}">{{ tree }}</a>
         {% endfor %}
     </ol>
 
-    <a href="{% url 'mindmap' %}">Перейти на карту</a>
+
    {% comment %} <p>
     {{ jsonstr|linebreaks }}
     </p>{% endcomment %}
-
-    <span>{{ jsonSer|linebreaks }}</span>
-<hr>
-<span>{{ jsonDeSer|linebreaks }}</span>
+<span>
+{{ user.username }}
+</span>
 
 <input type="button" value="Run ajax Example" id="but" name="but" onclick="ajaxexmpl()"/>
 <hr>

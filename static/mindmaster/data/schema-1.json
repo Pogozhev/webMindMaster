@@ -1,0 +1,116 @@
+{
+	"nodes": [
+		{
+			"id": "book",
+			"name": "Book",
+			"type": "table",
+			"columns": [
+				{
+					"id": "id",
+					"datatype": "integer",
+					"primaryKey": true
+				},
+				{
+					"id": "isbn",
+					"datatype": "varchar"
+				},
+				{
+					"id": "title",
+					"datatype": "varchar"
+				}
+			]
+		},
+		{
+			"id": "book_author",
+			"name": "BookAuthor",
+			"type": "table",
+			"columns": [
+				{
+					"id": "book_id",
+					"datatype": "integer"
+				},
+				{
+					"id": "author_id",
+					"datatype": "integer"
+				}
+			]
+		},
+		{
+			"id": "author",
+			"name": "Author",
+			"type": "table",
+			"columns": [
+				{
+					"id": "id",
+					"datatype": "integer",
+					"primaryKey": true
+				},
+				{
+					"id": "name",
+					"datatype": "varchar"
+				}
+			]
+		},
+		{
+			"id": "publisher",
+			"name": "Publisher",
+			"type": "table",
+			"columns": [
+				{
+					"id": "id",
+					"datatype": "integer",
+					"primaryKey": true
+				},
+				{
+					"id": "name",
+					"datatype": "varchar"
+				}
+			]
+		},
+		{
+			"id": "book_publisher",
+			"name": "BookPublisher",
+			"type": "table",
+			"columns": [
+				{
+					"id": "book_id",
+					"datatype": "integer"
+				},
+				{
+					"id": "publisher_id",
+					"datatype": "integer"
+				}
+			]
+		}
+	],
+	"edges": [
+		{
+			"source": "book",
+			"target": "book_author",
+			"data": {
+				"type": "common"
+			}
+		},
+		{
+			"source": "book_author",
+			"target": "author",
+			"data": {
+				"type": "1:1"
+			}
+		},
+		{
+			"source": "book",
+			"target": "book_publisher",
+			"data": {
+				"type": "1:1"
+			}
+		},
+		{
+			"source": "book_publisher",
+			"target": "publisher",
+			"data": {
+				"type": "1:1"
+			}
+		}
+	]
+}

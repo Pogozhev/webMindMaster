@@ -4,7 +4,8 @@ import json
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.http import JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from django.template import loader
 from django.contrib.auth.models import User
 from django.core import serializers
@@ -26,32 +27,35 @@ from trees.serializers import TreeSerializer
 
 @login_required
 def tree_list(request):
-    tree_List = Tree.objects.all()
-    tree2json_exmpl="";
-    json2tree_exmpl = "";
-    #tree2json_exmpl = tree2json(2)
-    #for jsonStr in tree2json_exmpl:
-    #   json2tree_exmpl += json2tree(jsonStr)
-    #json2tree_exmpl = json2tree(tree2json_exmpl)
-
-    #if (tree_List.count()!=0):
-    #    jsonstr = tree2json(tree_List.first()) # Create string in JSON about tree and its objects with fields
-
+    tree_List = Tree.objects.filter(user=request.user)
     title = _("Hello, ") + request.user.get_username()
-    template = loader.get_template('webmindmaster/index.html')
     context1 = {
         'tree_list': tree_List,
         'title': title,
-        'jsonSer': tree2json_exmpl,
-        'jsonDeSer': json2tree_exmpl,
     }
     logger.info("User: " + request.user.username + " got trees")
     #return render(request, 'webmindmaster/index.html', context1)
     return render(request, 'trees/tree_list.html', context1)
-#xmlHttpsRequest ajax
 
-def mindmap(request):
-    return render(request, 'webmindmaster/index.html')
+
+def mindmap(request, tree_id):
+    tree = get_object_or_404(Tree, pk=tree_id)
+    return HttpResponse(tree.file, content_type='application/json')
+
+
+def mindmapview(request, tree_id):
+    tree = get_object_or_404(Tree, pk=tree_id)
+    context = {
+        'tree': tree,
+    }
+    return render(request, 'webmindmaster/index.html', context)
+
+
+def savetree(request, tree_id, json_tree):
+    tree = get_object_or_404(Tree, pk=tree_id)
+    tree.file = json_tree
+    tree.save();
+    return HttpResponse(request)
 
 
 def ajaxExmpl(request):
