@@ -1,17 +1,126 @@
+
+{% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    {% comment %}<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <script type="javascript" src="bower_components/jquery/dist/jquery.min.js"></script>{% endcomment %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{%  static 'bootstrap/dist/css/bootstrap.css' %}"/>
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/gollum-template.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-defaults.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/jsPlumbToolkit-demo.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/app.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{%  static 'mindmaster/css/index.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+
+<script>
+
+    $(function () {
+    $.ajaxSetup({
+        headers: { "X-CSRFToken": getCookie("csrftoken") }
+    });
+});
+
+    function getCookie(c_name)
+{
+    if (document.cookie.length > 0)
+    {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1)
+        {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) c_end = document.cookie.length;
+            return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+ }
+
+</script>
+
 </head>
 <body>
-<span>header</span>
-<br>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div style="padding-top: 10px">
+                            <a href="{% url 'tree_list' %}"  class="btn btn-primary">{% trans "Home page" %}</a>
+                        </div>
+                    </li>
+                     <li>
+                         <div style="width: 500px; padding-top: 10px">
+
+                        </div>
+                     </li>
+                     </ul>
+
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="dropdown" style="padding-top: 10px">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        {% trans "Choose language" %}
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang in LANGUAGES %}
+                            <li>
+                            <form name="setLang{{ lang.1}}" action="/i18n/setlang/" method="POST">
+	                        {% csrf_token %}
+	                        <input name="next" type="hidden" value="/">
+	                        <input type="hidden" name="language" value="{{ lang.0 }}">
+	                        <a href="#" onclick="document.setLang{{ lang.1 }}.submit(); return false;" class="btn">{{ lang.1 }}</a>
+	                        </form>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div style="padding-top: 10px">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'logout' %}" class="btn btn-primary">Выйти</a>
+                        {% endif %}
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<div class="panel-body"><br>
     {% block content %}
     {% endblock %}
 <br>
-<span>footer</span>
+</div>
+
+<div class = "panel-footer">
+    <p>&copy; 2016 – webTreeMaster</p>
+</div>
 </body>
 </html>

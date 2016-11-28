@@ -1,0 +1,14 @@
+{
+	"name": "first tree",
+	"parametr": "root",
+	"children": [
+		{
+			"name": "child1",
+			"parametr1": "firs"
+		},
+		{
+			"name": "child2",
+			"parametr1": "second"
+		}
+	]
+}

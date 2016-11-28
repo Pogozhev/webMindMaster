@@ -1,0 +1,20 @@
+{
+	"id":"foo",
+	"name":"FOO!",
+	"children":[
+		{
+			"id":"bar",
+			"name":"BAR!",
+			"children":[
+				{
+					"id":"baz",
+					"name":"BAZ!"
+				}
+			]
+		},
+		{
+			"id":"qux",
+			"name":"QUX!"
+		}
+	]
+}
