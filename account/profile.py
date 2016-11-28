@@ -1,11 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
-from django.forms import Form
-from django.http import HttpResponse, request
 from django.http import HttpResponseRedirect
-from django.shortcuts import redirect, render_to_response, render
-from django.template import RequestContext
-from django.template import loader
-from django.views.decorators.csrf import csrf_protect, requires_csrf_token, csrf_exempt
+from django.shortcuts import render
 
 import logging
 
