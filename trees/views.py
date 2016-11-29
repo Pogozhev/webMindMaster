@@ -2,6 +2,8 @@ import json
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+
 from trees.models import Tree
 import logging
 from django.utils.translation import ugettext_lazy as _
@@ -36,9 +38,10 @@ def mindmapview(request, tree_id):
     return render(request, 'webmindmaster/index.html', context)
 
 
-def savetree(request, tree_id, json_tree):
+@csrf_exempt
+def savetree(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
-    tree.file = json_tree
+    tree.file = request.body
     tree.save();
     return HttpResponse(request)
 

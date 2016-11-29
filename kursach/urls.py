@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^logout', account_views.logout_view, name='logout'),
     url(r'^mindmapview/(?P<tree_id>[0-9]+)', tree_views.mindmapview, name='mindmapview'),
     url(r'^mindmap/(?P<tree_id>[0-9]+)', tree_views.mindmap, name='mindmap'),
-    url(r'^savetree/(?P<tree_id>\rw+)', tree_views.savetree, name='savetree'),
+    url(r'^savetree/(?P<tree_id>[0-9]+)', tree_views.savetree, name='savetree'),
     url(r'^ajaxExmpl/$', tree_views.ajaxExmpl),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 

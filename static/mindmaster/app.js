@@ -27,7 +27,7 @@
 		// Declare an instance of the Toolkit, and supply the functions we will use to get ids and types from nodes.
 		var toolkit = jsPlumbToolkit.newInstance({
 			autoSave: true,
-			saveUrl: "/savetree/"+tree_id.value+".json",
+			saveUrl: "/savetree/"+tree_id.value,
 
 			idFunction: idFunction,
 			typeFunction: typeFunction,
@@ -380,6 +380,17 @@
 				EndpointStyle: { fill: "#89bcde" },
 				EndpointHoverStyle: { fill: "#FF6600" }
 			},
+		});
+
+		jsPlumb.on(controls, "tap", "[save]", function () {
+			toolkit.save({
+				url: "/savetree/"+tree_id.value,
+			})
+		});
+
+		jsPlumb.on(controls, "tap", "[addroot]", function () {
+			toolkit.clearSelection();
+			renderer.zoomToFit();
 		});
 
 		// listener for mode change on renderer.
