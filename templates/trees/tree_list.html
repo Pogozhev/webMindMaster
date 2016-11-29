@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
+    <br>
     <div class="row">
-<div  class="col-md-4 col-md-offset-1">
-   <h3>{{ title }}</h3>
-    <hr>
-    <table border="1">
+<div  class="col-md-4 col-md-offset-4">
+<div class="panel panel-default">
+  <div class="panel-heading">{{ title }}</div>
+  <div class="panel-body">
+  <center>
+    <table class="table-bordered table-striped" style="width: 100%; text-align:center">
     <tr>
-        <th>
-            ID
-        </th>
-        <th>
-            Name
-        </th>
-        <th>
-            Create date
-        </th>
-        <th>
-            Update
-        </th>
+        <td>
+            <b>ID</b>
+        </td>
+        <td>
+            <b>{% trans "Name" %}</b>
+        </td>
+        <td>
+            <b>{% trans "Create date" %}</b>
+        </td>
+        <td>
+            <b>{% trans "Update" %}</b>
+        </td>
     </tr>
         {% for tree in tree_list %}
             <tr>
@@ -32,44 +35,16 @@
                     <span>{{ tree.create_date }}</span>
                 </td>
                 <td>
-                    <a href="{% url 'mindmapview' tree_id=tree.id %}" class="btn btn-warning">Update</a>
+                    <a href="{% url 'mindmapview' tree_id=tree.id %}" class="btn btn-warning">{% trans "Update" %}</a>
                 </td>
             </tr>
         {% endfor %}
     </table>
+  </center>
+  </div>
+</div>
 
 
-   {% comment %} <p>
-    {{ jsonstr|linebreaks }}
-    </p>{% endcomment %}
-<span>
-{{ user.username }}
-</span>
-
-<input type="button" value="Run ajax Example" id="but" name="but" onclick="ajaxexmpl()"/>
-<hr>
-
-<input type="button" value="log_add_tree"  name="but" onclick="log_add_tree(1)"/>
-<input type="button" value="log_get_tree"  name="but" onclick="log_get_tree(1)"/>
-<input type="button" value="log_delete_tree"  name="but" onclick="log_delete_tree(1)"/>
-<input type="button" value="log_update_tree"  name="but" onclick="log_update_tree(1)"/>
-<hr>
-<input type="button" value="log_get_object"  name="but" onclick="log_get_object(1)"/>
-<input type="button" value="log_delete_object"  name="but" onclick="log_delete_object(1)"/>
-<input type="button" value="log_update_object"  name="but" onclick="log_update_object(1)"/>
-<input type="button" value="log_add_object"  name="but" onclick="log_add_object(1)"/>
-<hr>
-<input type="button" value="log_get_field"  name="but" onclick="log_get_field(1)"/>
-<input type="button" value="log_delete_field"  name="but" onclick="log_delete_field(1)"/>
-<input type="button" value="log_update_field"  name="but" onclick="log_update_field(1)"/>
-<input type="button" value="log_add_field"  name="but" onclick="log_add_field(1)"/>
-
-<hr>
-
-   {% comment %} <a href="{% url 'workspace_new_tree' tree_name='new_tree' %}"  class="btn btn-primary">Создать новое дерево</a>{% endcomment %}
-    <br>
-
-    {% comment %}<input type="button" onclick="a()" value="adgadg" />{% endcomment %}
 </div>
 </div>
     <script>

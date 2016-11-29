@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block logout %}
 <div>
     <form action="logout_view">
-        <input type="submit" value="Logout"/>
+        <input type="submit" value="{% trans "Logout" %}"/>
     </form>
 </div>
 {% endblock %}
