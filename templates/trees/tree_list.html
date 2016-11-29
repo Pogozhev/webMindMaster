@@ -5,11 +5,38 @@
 <div  class="col-md-4 col-md-offset-1">
    <h3>{{ title }}</h3>
     <hr>
-    <ol>
+    <table border="1">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Create date
+        </th>
+        <th>
+            Update
+        </th>
+    </tr>
         {% for tree in tree_list %}
-            <a href="{% url 'mindmapview' tree_id=tree.id %}">{{ tree }}</a>
+            <tr>
+                <td>
+                    <span>{{ tree.id }}</span>
+                </td>
+                <td>
+                    <span>{{ tree.name }}</span>
+                </td>
+                <td>
+                    <span>{{ tree.create_date }}</span>
+                </td>
+                <td>
+                    <a href="{% url 'mindmapview' tree_id=tree.id %}" class="btn btn-warning">Update</a>
+                </td>
+            </tr>
         {% endfor %}
-    </ol>
+    </table>
 
 
    {% comment %} <p>
