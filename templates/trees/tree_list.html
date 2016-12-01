@@ -10,35 +10,57 @@
   <center>
     <table class="table-bordered table-striped" style="width: 100%; text-align:center">
     <tr>
-        <td>
+        <td  style="margin: 5px">
             <b>ID</b>
         </td>
-        <td>
+        <td  style="margin: 5px">
             <b>{% trans "Name" %}</b>
         </td>
-        <td>
+        <td  style="margin: 5px">
             <b>{% trans "Create date" %}</b>
         </td>
-        <td>
+        <td  style="margin: 5px">
             <b>{% trans "Update" %}</b>
         </td>
+        {% if user.is_superuser %}
+        <td  style="margin: 5px">
+            <b>{% trans "Delete" %}</b>
+        </td>
+        {% endif %}
     </tr>
         {% for tree in tree_list %}
             <tr>
-                <td>
+                <td  style="margin: 5px">
                     <span>{{ tree.id }}</span>
                 </td>
-                <td>
+                <td  style="margin: 5px">
                     <span>{{ tree.name }}</span>
                 </td>
-                <td>
+                <td  style="margin: 5px">
                     <span>{{ tree.create_date }}</span>
                 </td>
-                <td>
+                <td  style="margin: 5px">
                     <a href="{% url 'mindmapview' tree_id=tree.id %}" class="btn btn-warning">{% trans "Update" %}</a>
                 </td>
+                 {% if user.is_superuser %}
+                     <td  style="margin: 5px">
+                        <a href="{% url 'deletetree' tree_id=tree.id %}" class="btn btn-danger">{% trans "Delete" %}</a>
+                    </td>
+                 {% endif %}
             </tr>
         {% endfor %}
+    <tr>
+        {% if user.is_superuser %}
+        <td colspan="5" style="margin: 5px">
+            <a href="{% url 'createtree' %}" class="btn btn-primary">{% trans "New tree" %}</a>
+        </td>
+        {% else %}
+        <td colspan="4" style="margin: 5px">
+            <a href="{% url 'createtree' %}" class="btn btn-primary">{% trans "New tree" %}</a>
+        </td>
+        {% endif %}
+
+    </tr>
     </table>
   </center>
   </div>

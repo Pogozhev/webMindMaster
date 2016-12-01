@@ -1,8 +1,12 @@
 import json
+
+from django.http import HttpResponseRedirect
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
+
 
 from trees.models import Tree
 import logging
@@ -21,7 +25,6 @@ def tree_list(request):
         'title': title,
     }
     logger.info("User: " + request.user.username + " got trees")
-    #return render(request, 'webmindmaster/index.html', context1)
     return render(request, 'trees/tree_list.html', context1)
 
 
@@ -36,6 +39,28 @@ def mindmapview(request, tree_id):
         'tree': tree,
     }
     return render(request, 'webmindmaster/index.html', context)
+
+
+def create_tree(request):
+    tree = Tree(user=request.user)
+    tree.save()
+    context = {
+        'tree': tree,
+    }
+    return render(request, 'webmindmaster/index.html', context)
+
+
+def rename_tree(request, tree_id):
+    tree = get_object_or_404(Tree, pk=tree_id)
+    tree.name = request.POST.get('new_name')
+    tree.save()
+    return HttpResponse(request)
+
+
+def delete_tree(request, tree_id):
+    tree = get_object_or_404(Tree, pk=tree_id)
+    tree.delete()
+    return HttpResponseRedirect('tree_list')
 
 
 @csrf_exempt

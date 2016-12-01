@@ -32,6 +32,9 @@ urlpatterns = [
     url(r'^mindmapview/(?P<tree_id>[0-9]+)', tree_views.mindmapview, name='mindmapview'),
     url(r'^mindmap/(?P<tree_id>[0-9]+)', tree_views.mindmap, name='mindmap'),
     url(r'^savetree/(?P<tree_id>[0-9]+)', tree_views.savetree, name='savetree'),
+    url(r'^createtree/', tree_views.create_tree, name='createtree'),
+    url(r'^renametree/(?P<tree_id>[0-9]+)', tree_views.rename_tree, name='renametree'),
+    url(r'^deletetree/(?P<tree_id>[0-9]+)', tree_views.delete_tree, name='deletetree'),
     url(r'^ajaxExmpl/$', tree_views.ajaxExmpl),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 

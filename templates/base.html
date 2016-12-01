@@ -50,6 +50,36 @@
     return "";
  }
 
+
+{% comment %}(function(G) {
+  "use strict";
+  var $ = G.jQuery;
+
+  function csrfSafeMethod(method) {
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+  function sameOrigin(url) {
+    var host = document.location.host, // host + port
+        protocol = document.location.protocol,
+        sr_origin = '//' + host,
+        origin = protocol + sr_origin;
+    // Allow absolute or scheme relative URLs to same origin
+    return (url == origin || url.slice(0, origin.length + 1) == origin
+        + '/')
+        || (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin
+            + '/') ||
+        !(/^(\/\/|http:|https:).*/.test(url));
+  }
+  $.ajaxSetup({
+    beforeSend : function(xhr, settings) {
+      if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+        xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));
+      }
+    }
+  });
+}(this));{% endcomment %}
+
+
 </script>
 
 </head>
