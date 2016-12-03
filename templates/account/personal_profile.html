@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <br>
+<center>
+<div class="panel panel-default"  style="width: 800px">
+    <div class="panel-heading">{% trans "Personal profile" %}</div>
+    <div class="panel-body" style="width: 600px">
+    <form action="personal_profile" method="post" class="form-horizontal">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <span>{% trans "First name" %}</span>
+                </div>
+                <div class="col-md-4">
+                    <input name="first_name" class="form-control" value="{{ first_name }}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span>{% trans "Last name" %}</span>
+                </div>
+                <div class="col-md-4">
+                    <input name="last_name" class="form-control" value="{{ last_name }}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span>{% trans "Email" %}</span>
+                </div>
+                <div class="col-md-4">
+                    <input name="email" class="form-control" value="{{ email }}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span>{% trans "Last login" %}</span>
+                </div>
+                <div class="col-md-4">
+                   <span>{{ last_login }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                     <input type="submit" value="{% trans "Update" %}" class="btn btn-default"/>
+                </div>
+            </div>
+            </div>
+        <font color="#ff0000">{{ error }}</font>
+        <span>{{ method }} method</span>
+    </form>
+        </div>
+    </div>
+</center>
+
+{% endblock %}
