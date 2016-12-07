@@ -5,7 +5,6 @@
 	text-align: center;
 /*	height: 850px;*/
 	border: 1px #ccc solid;
-	padding-top: 45px;
 }
 
 #mindmap-canvas {
@@ -105,13 +104,4 @@
 
 #label-box {
 	display: none;
-}
-
-/*////////////////////////////////////////////////////////////////////////////////*/
-
-.mindmap-canvas {
-	height: 500px;
-	border:1px solid #CCC;
-	background-color: white;
-/*	overflow: visible;*/
 }

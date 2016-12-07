@@ -45,6 +45,7 @@ def create_tree(request):
     context = {
         'tree': tree,
     }
+    newTree(request, tree.id)
     return render(request, 'webmindmaster/index.html', context)
 
 
@@ -75,7 +76,7 @@ def ajaxExmpl(request):
     return HttpResponse(json.dumps(r), content_type="application/json")
 
 def newTree(request, tree_id):
-    logger.info("User: " + request.user.username + " created new tree: " + tree_id)
+    logger.info("User: " + request.user.username + " created new tree: " + str(tree_id))
     return HttpResponse(request)
 
 def updateTree(request, tree_id):

@@ -1,3 +1,4 @@
+{% comment %}
 <!-- table node type -->
 <script type="jtk" id="tmplTable">
 	<div class="table node">
@@ -129,4 +130,178 @@
 <script type="jtk" class="dlg" id="dlgMessage" title="Message" cancel="false">
 	${msg}
 </script>
+{% endcomment %}
+
+
+
+
+<script type="jtk" id="tmplTable">
+	<div class="table node">
+		<div class="name">
+			<div class="delete" title="Click to delete">
+				<i class="fa fa-times"/>
+			</div>
+			<span>${name}</span>
+			<div class="new-table add" title="Click to add a new table">
+				<i class="fa fa-plus"/>
+			</div>
+			<div class="new-column add" title="Click to add a new column">
+				<i class="fa fa-plus"/>
+			</div>
+		</div>
+		<ul class="table-columns">
+			<r-each in="columns">
+				<r-tmpl lookup="${datatype}"/>
+			</r-each>
+		</ul>
+	</div>
+</script>
+
+<script type="jtk" id="checkbox">
+	<li class="table-column table-column-type-${datatype}" data-port-id="${id}">
+		<div class="table-column-delete">
+			<i class="fa fa-times table-column-delete-icon"/>
+		</div>
+		<div class="table-column-edit checkbox-edit">
+			<i class="fa fa-pencil table-column-edit-icon"/>
+		</div>
+			${id} : ${value}
+		<jtk-target port-id="${id}" port-type="column" scope="${datatype}" />
+	</li>
+</script>
+
+<script type="jtk" id="varchar">
+	<li class="table-column table-column-type-${datatype}" data-port-id="${id}">
+		<div class="table-column-delete">
+			<i class="fa fa-times table-column-delete-icon"/>
+		</div>
+		<div class="table-column-edit varchar-edit">
+			<i class="fa fa-pencil table-column-edit-icon"/>
+		</div>
+			${id} : ${value}
+		<jtk-target port-id="${id}" port-type="column" scope="${datatype}" />
+	</li>
+</script>
+
+<script type="jtk" id="text">
+	<li class="table-column table-column-type-${datatype}" data-port-id="${id}">
+		<div class="table-column-delete">
+			<i class="fa fa-times table-column-delete-icon"/>
+		</div>
+		<span>${id}</span>
+		<div class="table-column-edit text-edit">
+			<i class="fa fa-pencil table-column-edit-icon"/>
+		</div>
+
+		<textarea disabled="true" class="text-column" jtk-focus jtk-att="value" jtk-commit="true">
+			${value}
+		</textarea>
+		<jtk-target port-id="${id}" port-type="column" scope="${datatype}" />
+	</li>
+</script>
+
+<script type="jtk" id="tags">
+	<li class="table-column table-column-type-${datatype}" data-port-id="${id}">
+		<div class="table-column-delete">
+			<i class="fa fa-times table-column-delete-icon"/>
+		</div>
+		<div class="table-column-edit">
+			<i class="fa fa-plus table-column-edit-icon"/>
+		</div>
+
+		<r-each in="value">
+			<r-tmpl id="tag"/>
+		</r-each>
+	</li>
+</script>
+
+<script type="jtk" id="tag">
+	<div class="tag" data-port-id="${id}">
+		<div class="tag-delete">
+			<i class="fa fa-times table-column-delete-icon"/>
+		</div>
+		<span>ds</span>
+	</div>
+</script>
+
+<script type="jtk" class="dlg" id="dlgColumnAdd" title="Edit Column">
+	<div class="db-column-type">
+		<label>
+			<div class="form-labels-float">id:</div>
+			<div class="pull-left"><input class="" jtk-att="id" jtk-focus jtk-commit="true"/></div>
+			<div class="clearfix"/>
+		</label>
+
+		<p>
+			<div class="form-labels">Type:</div>
+			<div class="clearfix"></div>
+			<ul>
+				<li>
+					<label>
+						<input type="radio" name="cType" value="checkbox" jtk-focus jtk-att="datatype" checked/>
+						Checkbox
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="cType" value="varchar" jtk-att="datatype"/>
+						Varchar
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="cType" value="text" jtk-att="datatype"/>
+						Text
+					</label>
+				</li>
+			</ul>
+		</p>
+	</div>
+</script>
+
+<script type="jtk" class="dlg" id="dlgCheckboxEdit" title="Enter Name">
+	<input type="text" size="50" jtk-focus jtk-att="id" jtk-commit="true"/>
+	<input type="checkbox" class="column-checkbox" jtk-att="value"/>
+</script>
+
+
+<script type="jtk" class="dlg" id="dlgVarcharEdit" title="Enter Name">
+	<div class="form-labels">Id:</div>
+	<div class="clearfix"></div>
+	<li>
+		<input type="text" size="50" jtk-focus jtk-att="id" jtk-commit="true"/>
+	</li>
+	<div class="form-labels">Text:</div>
+	<div class="clearfix"></div>
+	<li>
+		<input type="text" size="50" jtk-focus jtk-att="value" jtk-commit="true"/>
+	</li>
+</script>
+
+<script type="jtk" class="dlg" id="dlgTextEdit" title="Enter Name">
+	<div class="form-labels">Id:</div>
+	<div class="clearfix"></div>
+	<li>
+		<input type="text" size="50" jtk-focus jtk-att="id" jtk-commit="true"/>
+	</li>
+	<div class="form-labels">Text:</div>
+	<div class="clearfix"></div>
+	<li>
+		<textarea class="txtViewQuery" jtk-focus jtk-att="value" jtk-commit="true"/>
+	</li>
+</script>
+
+<!-- edit name (table or view) -->
+<script type="jtk" class="dlg" id="dlgName" title="Enter Name">
+	<input type="text" size="50" jtk-focus jtk-att="name" jtk-commit="true"/>
+</script>
+
+<script type="jtk" class="dlg" id="dlgConfirm" title="Please Confirm">
+	${msg}?
+</script>
+
+<script type="jtk" class="dlg" id="dlgMessage" title="Message" cancel="false">
+	${msg}
+</script>
+
 

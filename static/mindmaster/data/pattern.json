@@ -1,0 +1,23 @@
+{
+	"nodes": [
+		{
+			"id": "root",
+			"name": "Root",
+			"columns": [
+				{
+					"id": "checkbox",
+					"datatype": "checkbox",
+					"value": true
+				},
+				{
+					"id": "varchar",
+					"datatype": "varchar",
+					"value": "text"
+				}
+			]
+		}
+	],
+	"edges": [
+	]
+}
+
