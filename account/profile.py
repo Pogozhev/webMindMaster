@@ -50,6 +50,7 @@ def personal_profile(request):
             'method': 'GET'
         }
         return render(request, 'account/personal_profile.html', context)
+
     if request.method == "POST":
         user = request.user
         first_name = request.POST['first_name']

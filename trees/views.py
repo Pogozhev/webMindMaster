@@ -18,6 +18,8 @@ logger = logging.getLogger(__name__)
 def tree_list(request):
     tree_List = Tree.objects.filter(user=request.user)
     title = _("Hello, ") + request.user.get_username()
+    if len(request.user.first_name) != 0:
+        title = _("Hello, ") + request.user.first_name
     context1 = {
         'tree_list': tree_List,
         'title': title,
@@ -26,11 +28,13 @@ def tree_list(request):
     return render(request, 'trees/tree_list.html', context1)
 
 
+@login_required
 def mindmap(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
     return HttpResponse(tree.file, content_type='application/json')
 
 
+@login_required
 def mindmapview(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
     context = {
@@ -39,6 +43,7 @@ def mindmapview(request, tree_id):
     return render(request, 'webmindmaster/index.html', context)
 
 
+@login_required
 def create_tree(request):
     tree = Tree(user=request.user)
     tree.save()
@@ -49,6 +54,7 @@ def create_tree(request):
     return render(request, 'webmindmaster/index.html', context)
 
 
+@login_required
 def rename_tree(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
     tree.name = request.POST.get('new_tree_name')
@@ -56,6 +62,7 @@ def rename_tree(request, tree_id):
     return HttpResponse(request)
 
 
+@login_required
 def delete_tree(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
     logger.info("User: " + request.user.username + " deleted tree: " + str(tree.id))

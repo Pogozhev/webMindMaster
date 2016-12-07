@@ -618,3 +618,116 @@
 2016-12-07 19:30:01,252 [INFO] trees.views: User: admin deleted tree: 32
 2016-12-07 19:30:01,389 [INFO] trees.views: User: admin got trees
 2016-12-07 19:30:07,548 [INFO] trees.views: User: admin got trees
+2016-12-07 21:26:52,607 [INFO] trees.views: User: admin got trees
+2016-12-07 21:26:55,425 [INFO] account.profile: User : login
+2016-12-07 21:26:56,934 [INFO] account.profile: User :admin login
+2016-12-07 21:26:57,005 [INFO] trees.views: User: admin got trees
+2016-12-07 21:26:58,451 [INFO] trees.views: User: admin got trees
+2016-12-07 21:27:00,451 [INFO] trees.views: User: admin got trees
+2016-12-07 21:27:02,228 [INFO] trees.views: User: admin got trees
+2016-12-07 21:27:07,752 [INFO] trees.views: User: admin updated tree: 5
+2016-12-07 21:27:08,577 [INFO] trees.views: User: admin updated tree: 5
+2016-12-07 21:27:09,153 [INFO] trees.views: User: admin updated tree: 5
+2016-12-07 21:27:09,955 [INFO] trees.views: User: admin got trees
+2016-12-07 21:27:10,804 [INFO] trees.views: User: admin deleted tree: 5
+2016-12-07 21:27:10,881 [INFO] trees.views: User: admin got trees
+2016-12-07 21:27:11,975 [INFO] trees.views: User: admin created new tree: 17
+2016-12-07 21:27:13,402 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:14,868 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:14,926 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:16,152 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:17,444 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:17,531 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:19,360 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:22,219 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:27:25,958 [INFO] trees.views: User: admin got trees
+2016-12-07 21:28:20,918 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:28:25,769 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:28:30,735 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:16,618 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:18,227 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:18,293 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:22,243 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:22,301 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:23,218 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:24,927 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:25,001 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:27,227 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:27,310 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:29,127 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:29,193 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:31,535 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:31,636 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:35,792 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:35,842 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:30:44,016 [INFO] trees.views: User: admin got trees
+2016-12-07 21:30:48,210 [INFO] trees.views: User: admin got trees
+2016-12-07 21:32:44,415 [INFO] trees.views: User: admin created new tree: 18
+2016-12-07 21:32:46,086 [INFO] trees.views: User: admin got trees
+2016-12-07 21:32:51,017 [INFO] trees.views: User: admin got trees
+2016-12-07 21:32:51,147 [INFO] trees.views: User: admin got trees
+2016-12-07 21:32:56,295 [INFO] trees.views: User: admin got trees
+2016-12-07 21:32:56,407 [INFO] trees.views: User: admin got trees
+2016-12-07 21:33:21,725 [INFO] trees.views: User: admin got trees
+2016-12-07 21:33:23,560 [INFO] trees.views: User: admin got trees
+2016-12-07 21:33:24,651 [INFO] trees.views: User: admin got trees
+2016-12-07 21:33:25,335 [INFO] trees.views: User: admin got trees
+2016-12-07 21:33:28,017 [INFO] trees.views: User: admin got trees
+2016-12-07 21:33:43,846 [INFO] trees.views: User: admin got trees
+2016-12-07 21:34:05,456 [INFO] trees.views: User: admin got trees
+2016-12-07 21:34:43,884 [INFO] trees.views: User: admin got trees
+2016-12-07 21:34:49,177 [INFO] trees.views: User: admin got trees
+2016-12-07 21:35:47,280 [INFO] trees.views: User: admin got trees
+2016-12-07 21:35:53,127 [INFO] trees.views: User: admin got trees
+2016-12-07 21:35:53,235 [INFO] trees.views: User: admin got trees
+2016-12-07 21:36:12,749 [INFO] trees.views: User: admin got trees
+2016-12-07 21:36:14,618 [INFO] trees.views: User: admin got trees
+2016-12-07 21:36:15,957 [INFO] trees.views: User: admin got trees
+2016-12-07 21:38:35,444 [INFO] trees.views: User: admin got trees
+2016-12-07 21:38:36,546 [INFO] trees.views: User: admin got trees
+2016-12-07 21:38:37,255 [INFO] trees.views: User: admin got trees
+2016-12-07 21:39:16,031 [INFO] trees.views: User: admin got trees
+2016-12-07 21:39:17,030 [INFO] trees.views: User: admin got trees
+2016-12-07 21:39:17,886 [INFO] trees.views: User: admin got trees
+2016-12-07 21:39:18,442 [INFO] trees.views: User: admin got trees
+2016-12-07 21:39:41,971 [INFO] trees.views: User: admin got trees
+2016-12-07 21:39:49,919 [INFO] trees.views: User: admin got trees
+2016-12-07 21:40:22,900 [INFO] trees.views: User: admin got trees
+2016-12-07 21:40:23,019 [INFO] trees.views: User: admin got trees
+2016-12-07 21:40:32,079 [INFO] trees.views: User: admin got trees
+2016-12-07 21:40:32,080 [INFO] trees.views: User: admin got trees
+2016-12-07 21:42:25,899 [INFO] trees.views: User: admin updated tree: 17
+2016-12-07 21:43:47,091 [INFO] trees.views: User: admin got trees
+2016-12-07 21:43:50,385 [INFO] trees.views: User: admin got trees
+2016-12-07 21:44:12,500 [INFO] account.profile: User : login
+2016-12-07 21:44:13,815 [INFO] account.profile: User :admin login
+2016-12-07 21:44:13,891 [INFO] trees.views: User: admin got trees
+2016-12-07 21:44:17,664 [INFO] trees.views: User: admin got trees
+2016-12-07 21:44:20,407 [INFO] account.profile: User : login
+2016-12-07 21:44:26,489 [INFO] account.profile: User :neadmin login
+2016-12-07 21:44:26,565 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:44:28,774 [INFO] trees.views: User: neadmin created new tree: 19
+2016-12-07 21:44:30,689 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:47:53,133 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:48:02,425 [INFO] account.profile: User neadmin changed: first name - from to Arkad
+2016-12-07 21:48:03,672 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:48:05,747 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:48:07,691 [INFO] account.profile: User neadmin changed: first name - fromArkad to 
+2016-12-07 21:48:08,265 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:50:37,778 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:50:39,944 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:50:43,835 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:50:46,649 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:50:52,048 [INFO] trees.views: User: neadmin updated tree: 9
+2016-12-07 21:50:54,189 [INFO] trees.views: User: neadmin updated tree: 9
+2016-12-07 21:50:54,257 [INFO] trees.views: User: neadmin updated tree: 9
+2016-12-07 21:50:57,481 [INFO] trees.views: User: neadmin updated tree: 9
+2016-12-07 21:50:59,464 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:58:22,674 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:58:28,764 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:58:31,523 [INFO] trees.views: User: neadmin got trees
+2016-12-07 21:59:14,725 [INFO] trees.views: User: admin got trees
+2016-12-07 22:16:09,924 [INFO] trees.views: User: admin got trees
+2016-12-07 22:16:26,097 [INFO] account.profile: User admin changed: first name - fromadmin name 3  to Арукадий
+2016-12-07 22:16:26,097 [INFO] account.profile: User admin changed: last name - fromadmin last name3 to Гончаров
+2016-12-07 22:16:26,984 [INFO] trees.views: User: admin got trees
