@@ -14,8 +14,6 @@ from django.utils.translation import ugettext_lazy as _
 
 logger = logging.getLogger(__name__)
 
-# Create your views here.
-
 @login_required
 def tree_list(request):
     tree_List = Tree.objects.filter(user=request.user)
@@ -52,7 +50,7 @@ def create_tree(request):
 
 def rename_tree(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
-    tree.name = request.POST.get('new_name')
+    tree.name = request.POST.get('new_tree_name')
     tree.save()
     return HttpResponse(request)
 
@@ -60,7 +58,7 @@ def rename_tree(request, tree_id):
 def delete_tree(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
     tree.delete()
-    return HttpResponseRedirect('tree_list')
+    return HttpResponse(request)
 
 
 @csrf_exempt

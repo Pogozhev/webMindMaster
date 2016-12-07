@@ -98,7 +98,7 @@
                     </li>
                      <li>
                          <div style="width: 500px; padding-top: 10px">
-                            <a href="{% url 'personal_profile' %}"  class="btn btn-primary">{% trans "Personal profile" %}</a>
+                            <a href="{% url 'personal_profile' %}"  class="btn btn-info">{% trans "Personal profile" %}</a>
                         </div>
                      </li>
                      </ul>
@@ -131,7 +131,7 @@
                 <li>
                     <div style="padding-top: 10px">
                         {% if user.is_authenticated %}
-                            <a href="{% url 'logout' %}" class="btn btn-primary">Выйти</a>
+                            <a href="{% url 'logout' %}" class="btn btn-primary">{% trans "Logout" %}</a>
                         {% endif %}
                     </div>
                 </li>
