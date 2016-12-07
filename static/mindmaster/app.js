@@ -103,8 +103,6 @@ jsPlumbToolkit.ready(function () {
 					var newNode = toolkit.addNode(data);
 					toolkit.addEdge({source: info.obj, target: newNode});
 					renderer.zoomToFit();
-					//console.log(info.obj.data);
-					//console.log(data);
 				}
 			}
 		});
@@ -148,7 +146,6 @@ jsPlumbToolkit.ready(function () {
 					if (data.id.length < 2)
 						alert("Column ids must be at least 2 characters!");
 					else {
-						console.log(data);
 						if (data.datatype == "checkbox")
 							data.value = false;
 						if (data.datatype == "varchar")
@@ -192,7 +189,6 @@ jsPlumbToolkit.ready(function () {
 		// set to the element that fired the event) and returns the toolkit data object that
 		// relates to the element.
 		var info = renderer.getObjectInfo(this);
-		console.log(info);
 		jsPlumbToolkit.Dialogs.show({
 			id: "dlgName",
 			data: info.obj.data,
@@ -235,13 +231,11 @@ jsPlumbToolkit.ready(function () {
 
 	jsPlumb.on(canvasElement, "tap", ".varchar-edit i", function () {
 		var info = renderer.getObjectInfo(this);
-		console.log(info.obj.data);
 		jsPlumbToolkit.Dialogs.show({
 			id: "dlgVarcharEdit",
 			title: "OLOLO",
 			data: info.obj.data,
 			onOK: function (data) {
-				console.log(data);
 				// if the user supplied a column name, tell the toolkit to add a new port, providing it the
 				// id and name of the new column.  This will result in a callback to the portFactory defined above.
 				if (data.id) {
@@ -263,13 +257,11 @@ jsPlumbToolkit.ready(function () {
 
 	jsPlumb.on(canvasElement, "tap", ".text-edit i", function () {
 		var info = renderer.getObjectInfo(this);
-		console.log(info.obj.data);
 		jsPlumbToolkit.Dialogs.show({
 			id: "dlgTextEdit",
 			title: "OLOLO",
 			data: info.obj.data,
 			onOK: function (data) {
-				console.log(data);
 				// if the user supplied a column name, tell the toolkit to add a new port, providing it the
 				// id and name of the new column.  This will result in a callback to the portFactory defined above.
 				if (data.id) {
@@ -302,20 +294,7 @@ jsPlumbToolkit.ready(function () {
 			// Two node types - 'table' and 'view'
 			nodes: {
 				"default": {
-					template: "tmplTable",
-					events: {
-						/*tap: function (params) {
-							toolkit.clearSelection();
-							toolkit.toggleSelection(params.node);
-							var allcolumns = params.node.getPorts()
-							//console.log(allcolumns);
-							allcolumns.forEach(function(item, i, arr) {
-								//console.log(i + ": " + item.data.id);
-							});
-							//getPorts
-							//console.log(descendants.getAll());
-						}*/
-					}
+					template: "tmplTable"
 				}
 			},
 			edges: {
@@ -344,11 +323,6 @@ jsPlumbToolkit.ready(function () {
 					},
 					allowLoopback: false,   // do not allow loopback connections from a port to itself.
 					allowNodeLoopback:false, // do not allow connections from this port to any other port on the same node.
-					/*events: {
-						"dblclick": function () {
-							console.log(arguments);
-						}
-					}*/
 				},
 				"checkbox": {
 					template: "checkbox",
@@ -361,11 +335,6 @@ jsPlumbToolkit.ready(function () {
 					},
 					allowLoopback: false,   // do not allow loopback connections from a port to itself.
 					allowNodeLoopback:false, // do not allow connections from this port to any other port on the same node.
-					/*events: {
-						"dblclick": function () {
-							console.log(arguments);
-						}
-					}*/
 				},
 				"varchar": {
 					template: "varchar",
@@ -378,11 +347,6 @@ jsPlumbToolkit.ready(function () {
 					},
 					allowLoopback: false,   // do not allow loopback connections from a port to itself.
 					allowNodeLoopback:false, // do not allow connections from this port to any other port on the same node.
-					/*events: {
-						"dblclick": function () {
-							console.log(arguments);
-						}
-					}*/
 				},
 				"text": {
 					template: "text",
@@ -395,11 +359,6 @@ jsPlumbToolkit.ready(function () {
 					},
 					allowLoopback: false,   // do not allow loopback connections from a port to itself.
 					allowNodeLoopback:false, // do not allow connections from this port to any other port on the same node.
-					/*events: {
-						"dblclick": function () {
-							console.log(arguments);
-						}
-					}*/
 				}
 			}
 		},
@@ -445,7 +404,7 @@ jsPlumbToolkit.ready(function () {
 
 		consumeRightClick: false,
 		zoomToFit:true,
-		elementsDraggable: false,
+		elementsDraggable: true,
 		jsPlumb:{
 			Anchors: ["Bottom", "Top"],
 			Connector: [ "StateMachine", { curviness: 10 } ],
@@ -466,19 +425,9 @@ jsPlumbToolkit.ready(function () {
 		})
 	});
 
-	jsPlumb.on(controls, "tap", "[addroot]", function () {
-		var tmp = toolkit.getCurrentSelection();
-		console.log(tmp);
-		renderer.zoomToFit();
-	});
-
 	jsPlumb.on(controls, "tap", "[reset]", function () {
 		toolkit.clearSelection();
 		renderer.zoomToFit();
-	});
-
-	renderer.bind("", function (mode) {
-
 	});
 
 // ------------------------ / rendering ------------------------------------
@@ -491,7 +440,6 @@ jsPlumbToolkit.ready(function () {
 	toolkit.load({
 //			type:"hierarchical-json",
 		url: "/mindmap/"+tree_id.value,
-//			url: "02.json"
 	});
 
 // ------------------------ /loading  ------------------------------------

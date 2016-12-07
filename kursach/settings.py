@@ -39,9 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
-    'fields',
     'trees',
-    'objects',
     'account',
 ]
 
@@ -175,16 +173,6 @@ LOGGING = {
             'propagate': True
         },
         'trees': {
-            'handlers': ['default'],
-            'level': 'DEBUG',
-            'propagate': True
-        },
-        'objects': {
-            'handlers': ['default'],
-            'level': 'DEBUG',
-            'propagate': True
-        },
-        'fields': {
             'handlers': ['default'],
             'level': 'DEBUG',
             'propagate': True

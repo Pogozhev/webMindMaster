@@ -45,7 +45,7 @@ def create_tree(request):
     context = {
         'tree': tree,
     }
-    newTree(request, tree.id)
+    logger.info("User: " + request.user.username + " created new tree: " + str(tree.id))
     return render(request, 'webmindmaster/index.html', context)
 
 
@@ -58,6 +58,7 @@ def rename_tree(request, tree_id):
 
 def delete_tree(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
+    logger.info("User: " + request.user.username + " deleted tree: " + str(tree.id))
     tree.delete()
     return HttpResponse(request)
 
@@ -67,27 +68,7 @@ def savetree(request, tree_id):
     tree = get_object_or_404(Tree, pk=tree_id)
     tree.file = request.body
     tree.save();
+    logger.info("User: " + request.user.username + " updated tree: " + str(tree.id))
     return HttpResponse(request)
 
-
-def ajaxExmpl(request):
-    r = {}
-    r['post_text'] = request.POST.get('the_post') + ' example txet from back end'
-    return HttpResponse(json.dumps(r), content_type="application/json")
-
-def newTree(request, tree_id):
-    logger.info("User: " + request.user.username + " created new tree: " + str(tree_id))
-    return HttpResponse(request)
-
-def updateTree(request, tree_id):
-    logger.info("User: " + request.user.username + " updated tree: " + tree_id)
-    return HttpResponse(request)
-
-def deleteTree(request, tree_id):
-    logger.info("User: " + request.user.username + " deleted tree: " + tree_id)
-    return HttpResponse(request)
-
-def getTree(request, tree_id):
-    logger.info("User: " + request.user.username + " got tree: " + tree_id)
-    return HttpResponse(request)
 
