@@ -3,37 +3,37 @@
 /* ----------------------------------------------------------------------------------------------------- */
 
 .table, .view {
-    background-color: #3E7E9C;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    position: absolute;
-    z-index: 11;
-    overflow: hidden;
-    min-width:80px;
-    min-height:30px;
-    width: auto;
-    border:1px solid #ccc;
+	background-color: #3E7E9C;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 12px;
+	position: absolute;
+	z-index: 11;
+	overflow: hidden;
+	min-width:80px;
+	min-height:30px;
+	width: auto;
+	border:1px solid #ccc;
 }
 
 .table .name, .view .name, .table li.jtk-draggable, .view li.jtk-draggable {
-    background-color: #3E7E9C;
-    color: #f7ebca;
-    cursor: move;
-    font-size: 13px;
-    line-height: 24px;
-    padding: 6px;
-    text-align: center;
+	background-color: #3E7E9C;
+	color: #f7ebca;
+	cursor: move;
+	font-size: 13px;
+	line-height: 24px;
+	padding: 6px;
+	text-align: center;
 }
 
 
 .table li.jtk-draggable, .view li.jtk-draggable {
-    min-width:100px;
-    border-radius:14px;
+	min-width:100px;
+	border-radius:14px;
 }
 
 .table .name span, .view .name span {
-    cursor:pointer;
+	cursor:pointer;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -42,66 +42,68 @@
 
 
 .table {
-    margin-bottom: 0;
-    min-width: 200px;
+	margin-bottom: 0;
+	min-width: 200px;
 }
 
 .table-columns {
-    margin:0;
-    padding:0;
+	margin:0;
+	padding:0;
 }
 
 .table-column {
-    list-style-type: none;
-    padding: 4px 6px;
+	list-style-type: none;
+	padding: 4px 6px;
 }
 
 
 .table-column-delete, .view-delete {
-    color: #407364;
-    padding: 2px;
-    cursor: pointer;
-    float: left;
-    font-size: 10px;
-    line-height: 10px;
+	color: #407364;
+	padding: 2px;
+	cursor: pointer;
+	float: left;
+	font-size: 10px;
+	line-height: 10px;
 }
 
 
 .table-column-edit {
-    color: #407364;
-    float: right;
-    cursor: pointer;
+	color: #407364;
+	float: right;
+	font-size: 10px;
+	cursor: pointer;
 }
 
 .new-table, .new-column, .delete, .table-column-delete {
-    -webkit-transition: background-color 0.15s ease-in;
-    -moz-transition: background-color 0.15s ease-in;
-    -o-transition: background-color 0.15s ease-in;
-    transition: background-color 0.15s ease-in;
+	-webkit-transition: background-color 0.15s ease-in;
+	-moz-transition: background-color 0.15s ease-in;
+	-o-transition: background-color 0.15s ease-in;
+	transition: background-color 0.15s ease-in;
 }
 
 .new-table:hover, .new-column:hover, .delete:hover {
-    color: #ff8000;
+	color: #ff8000;
 }
 
 .table-column-delete:hover {
-    color: #434343;
+	color: #434343;
 }
 
-.table-column-type-varchar {
-    background-color: #cbeae1;
+.table-column-type-varchar, .table-column-type-checkbox {
+	background-color: #cbeae1;
+    height: 24px;
 }
 
 .table-column-type-integer {
-    background-color: #cbe6de;
+	background-color: #cbe6de;
 }
 
 .table-column-type-date {
-    background-color: #e5f5f0;
+	background-color: #e5f5f0;
 }
 
 .table-column[primary-key='true'] {
-    background-color:#83b8a8;
+	background-color:#83b8a8;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -109,42 +111,42 @@
 /* ----------------------------------------------------------------------------------------------------- */
 
 .view {
-    margin-bottom: 0;
-    width: 200px;
-    overflow: hidden;
-    background-color: white;
+	margin-bottom: 0;
+	width: 200px;
+	overflow: hidden;
+	background-color: white;
 }
 
 .view-details {
-    font-size: 10px;
-    font-family: Courier;
-    padding: 10px;
+	font-size: 10px;
+	font-family: Courier;
+	padding: 10px;
 }
 
 .view .view-delete {
-    color: #f7ebca;
-    padding: 2px;
-    cursor: pointer;
-    float:left;
-    font-size: 10px;
-    line-height: 20px;
+	color: #f7ebca;
+	padding: 2px;
+	cursor: pointer;
+	float:left;
+	font-size: 10px;
+	line-height: 20px;
 }
 
 .view .view-delete:hover {
-    color: #ff8000;
+	color: #ff8000;
 }
 
 .txtViewQuery {
-    width: 272px;
-    height: 132px;
+	width: 390px;
+	height: 200px;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* --- Drag/drop interactions ------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------- */
 .drop-hover {
-    background-color: #629f72 !important;
-    color: #FFF !important;
+	background-color: #629f72 !important;
+	color: #FFF !important;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -152,24 +154,24 @@
 /* ----------------------------------------------------------------------------------------------------- */
 
 .delete-relationship {
-    border-radius: 12px;
-    cursor: pointer;
-    text-align: center;
+	border-radius: 12px;
+	cursor: pointer;
+	text-align: center;
 }
 
 .delete-relationship:hover {
-    color: #FFF;
-    background-color: #434343;
-    padding: 4px;
+	color: #FFF;
+	background-color: #434343;
+	padding: 4px;
 }
 
 .common-edge path {
-    stroke-width: 3;
-    stroke: #f76258;
+	stroke-width: 3;
+	stroke: #f76258;
 }
 
 .common-edge.jtk-hover path {
-    stroke:#434343;
+	stroke:#434343;
 }
 
 
@@ -178,29 +180,29 @@
 /* ----------------------------------------------------------------------------------------------------- */
 
 .form-labels-float {
-    float: left;
-    font-weight: bold;
-    text-align: right;
-    padding-right: 6px;
-    padding-top: 6px;
-    font-size: 14px;
+	float: left;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 6px;
+	padding-top: 6px;
+	font-size: 14px;
 }
 
 .form-labels {
-    font-weight: bold;
-    text-align: left;
-    padding-right: 6px;
-    font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	padding-right: 6px;
+	font-size: 14px;
 }
 
 .checkbox-id {
-    margin-top: 6px;
-    margin-left: 22px;
+	margin-top: 6px;
+	margin-left: 22px;
 }
 
 .btn-icon-margin {
-    line-height: 18px;
-    margin-left: 10px;
+	line-height: 18px;
+	margin-left: 10px;
 }
 
 
@@ -208,11 +210,79 @@
 .clearfix { clear: both; }
 
 /*/////////////////////////////////////////////////*/
-.new-table, .edit {
-    cursor: pointer;
-    float: left;
+.new-column {
+        cursor: pointer;
+/*    float: left;*/
     font-size: 10px;
     line-height: 20px;
 /*    margin-right: 2px;*/
     padding: 2px;
+}
+
+.new-table, .edit {
+	cursor: pointer;
+/*    float: left;*/
+	font-size: 10px;
+	line-height: 20px;
+/*    margin-right: 2px;*/
+	padding: 2px;
+}
+
+.mindmap-canvas {
+	height: 800px;
+	border:1px solid #CCC;
+	background-color: white;
+/*  overflow: visible;*/
+}
+.sidebar {
+	height: 800px;
+	width: 250px;
+}
+
+input.column-checkbox[type=checkbox] {
+	float: right;
+    height: 20px;
+    width: 20px;
+	margin: 7px;
+	line-height: normal
+}
+
+li.table-column[type=checkbox] {
+	height: 23px
+}
+
+textarea.text-column {
+    width: 184px;
+    height: 100px;
+    border:1px solid #ccc;
+}
+
+.tag {
+	background-color: #83b8a8;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 10px;
+/*	position: absolute;*/
+	z-index: 11;
+	overflow: hidden;
+	min-width: 20px;
+    max-width: 100px;
+	min-height: 15px;
+	width: auto;
+	border:1px solid #ccc;
+	margin-bottom: 0;
+}
+
+.tag-delete {
+	float: right;
+	margin-top: 0px;
+	margin-right: 5px;
+	line-height: normal;
+	color: #407364;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+.table-column-type-text {
+    background-color: #cbeae1;
 }

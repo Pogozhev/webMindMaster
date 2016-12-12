@@ -2,33 +2,23 @@
 {% load i18n %}
 {% block content %}
 
-	<script type="text/x-jtk-templates" src="templates.html"></script>
     {% include 'webmindmaster/templates.html' %}
 
-
-	<div class="mindmap-main" id="mindmap" style="padding-top: 0">
-		<div class="mindmap-canvas"  style="height: 80vh;">
-			<!--<div class="sidebar node-palette">
-				<ul>
-					<li jtk-node-type="table" title="Drag to add new">
-						<i class="fa fa-table btn-icon-margin"></i>
-						Table
-					</li>
-					<li jtk-node-type="view" title="Drag to add new">
-						<i class="fa fa-eye btn-icon-margin"></i>
-						View
-					</li>
-				</ul>
-			</div>-->
+	<div class="mindmap-main" id="mindmap">
+		<div class="mindmap-canvas" style="height: 89vh;">
 			<div class="controls">
-				<i class="fa fa-arrows selected-mode" mode="pan" title="Pan Mode"></i>
-				<i class="fa fa-pencil" mode="select" title="Select Mode"></i>
+				<i class="fa fa-pencil" save title="Save"></i>
+<!--				<i class="fa fa-arrows selected-mode" mode="pan" title="Pan Mode"></i>-->
+<!--				<i class="fa fa-pencil" mode="select" title="Select Mode"></i>-->
 				<i class="fa fa-home" reset title="Zoom To Fit"></i>
 			</div>
 			<div class="miniview"></div>
 		</div>
 	</div>
 
-    <input type="hidden" value="{{ tree.id }}" class="tree_id">
+	<input type="hidden" value="{{ tree.id }}" class="tree_id">
+
 
 {% endblock %}
+
+
