@@ -96,11 +96,13 @@
                             <a href="{% url 'tree_list' %}"  class="btn btn-primary">{% trans "Home page" %}</a>
                         </div>
                     </li>
+                     {% if user.is_authenticated %}
                      <li>
                          <div style="width: 500px; padding-top: 10px">
                             <a href="{% url 'personal_profile' %}"  class="btn btn-info">{% trans "Personal profile" %}</a>
                         </div>
                      </li>
+                     {% endif %}
                      </ul>
 
 

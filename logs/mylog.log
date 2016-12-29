@@ -731,3 +731,10 @@
 2016-12-07 22:16:26,097 [INFO] account.profile: User admin changed: first name - fromadmin name 3  to Арукадий
 2016-12-07 22:16:26,097 [INFO] account.profile: User admin changed: last name - fromadmin last name3 to Гончаров
 2016-12-07 22:16:26,984 [INFO] trees.views: User: admin got trees
+2016-12-29 11:40:33,274 [INFO] account.profile: User :admin login
+2016-12-29 11:40:33,349 [INFO] trees.views: User: admin got trees
+2016-12-29 11:40:36,935 [INFO] trees.views: User: admin got trees
+2016-12-29 11:40:38,673 [INFO] trees.views: User: admin got trees
+2016-12-29 11:40:41,864 [INFO] trees.views: User: admin got trees
+2016-12-29 12:56:22,962 [INFO] trees.views: User: admin got trees
+2016-12-29 12:56:24,302 [INFO] account.profile: User : login
