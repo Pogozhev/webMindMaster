@@ -738,3 +738,19 @@
 2016-12-29 11:40:41,864 [INFO] trees.views: User: admin got trees
 2016-12-29 12:56:22,962 [INFO] trees.views: User: admin got trees
 2016-12-29 12:56:24,302 [INFO] account.profile: User : login
+2017-01-18 19:12:07,516 [INFO] account.profile: User :admin login
+2017-01-18 19:12:07,852 [INFO] trees.views: User: admin got trees
+2017-01-18 19:14:53,571 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:14:53,631 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:14:56,062 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:14:56,147 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:21:12,656 [INFO] trees.views: User: admin got trees
+2017-01-18 19:23:08,009 [INFO] account.profile: User :admin login
+2017-01-18 19:23:08,108 [INFO] trees.views: User: admin got trees
+2017-01-18 19:31:31,085 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:31:33,935 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:31:34,044 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:37:57,836 [INFO] trees.views: User: admin got trees
+2017-01-18 19:43:22,278 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:43:27,320 [INFO] trees.views: User: admin updated tree: 2
+2017-01-18 19:43:29,002 [INFO] trees.views: User: admin updated tree: 2

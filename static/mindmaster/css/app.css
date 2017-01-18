@@ -1,10 +1,10 @@
 /* ----------------------------------------------------------------------------------------------------- */
 /* --- Node common -------------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------border-radius: 4px;--------------border:1px solid #ccc;------------------------------------------------ */
 
 .table, .view {
-	background-color: #3E7E9C;
-	border-radius: 4px;
+	background: rgb(37, 37, 37) !important;
+
 	cursor: pointer;
 	font-size: 12px;
 	position: absolute;
@@ -13,11 +13,13 @@
 	min-width:80px;
 	min-height:30px;
 	width: auto;
-	border:1px solid #ccc;
+
+	transition: box-shadow .15s ease-in-out,background .15s ease-in-out;
+	box-shadow: 0 2px 5px rgba(0,0,0,.5);
 }
 
 .table .name, .view .name, .table li.jtk-draggable, .view li.jtk-draggable {
-	background-color: #3E7E9C;
+	background: rgb(37, 37, 37) !important;
 	color: #f7ebca;
 	cursor: move;
 	font-size: 13px;
@@ -90,7 +92,7 @@
 }
 
 .table-column-type-varchar, .table-column-type-checkbox {
-	background-color: #cbeae1;
+	background-color: #95a7ab;
     height: 24px;
 }
 
@@ -167,7 +169,7 @@
 
 .common-edge path {
 	stroke-width: 3;
-	stroke: #f76258;
+	stroke: #767c7c;
 }
 
 .common-edge.jtk-hover path {
@@ -231,7 +233,7 @@
 .mindmap-canvas {
 	height: 800px;
 	border:1px solid #CCC;
-	background-color: white;
+	background-image: url(/static/mindmaster/img/backgraund.png) ;
 /*  overflow: visible;*/
 }
 .sidebar {
