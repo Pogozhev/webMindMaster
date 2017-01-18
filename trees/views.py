@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 @login_required
 def tree_list(request):
     tree_List = Tree.objects.filter(user=request.user)
-    title = _("Hello, ") + request.user.get_username()
+    title = _("Hello, ") + request.user.get_username() + (", you are cool ! ")
     if len(request.user.first_name) != 0:
         title = _("Hello, ") + request.user.first_name
     context1 = {
