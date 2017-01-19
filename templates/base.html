@@ -97,13 +97,13 @@
                         </div>
                     </li>
                      <li>
-                        <div style="padding-top: 10px">
+                        <div style="padding-top: 10px; padding-left:10px;">
                             <a href="{% url 'about' %}"  class="btn btn-primary">{% trans "About" %}</a>
                         </div>
                     </li>
                      {% if user.is_authenticated %}
                      <li>
-                         <div style="width: 500px; padding-top: 10px">
+                         <div style="width: 500px; padding-top: 10px; padding-left:10px;">
                             <a href="{% url 'personal_profile' %}"  class="btn btn-info">{% trans "Personal profile" %}</a>
                         </div>
                      </li>
@@ -115,7 +115,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <div class="dropdown" style="padding-top: 10px">
+                    <div class="dropdown" style="padding-top: 10px; padding-left:10px;">
                         <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         {% trans "Choose language" %}
                         <span class="caret"></span>
