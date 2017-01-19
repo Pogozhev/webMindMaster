@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', tree_views.tree_list, name='tree_list'),
     url(r'^tree_list/', tree_views.tree_list, name='tree_list'),
+    url(r'^about/', tree_views.about_view,   name='about'),
 
     url(r'^login', account_views.login_view, name='login'),
     url(r'^logout', account_views.logout_view, name='logout'),

@@ -96,6 +96,11 @@
                             <a href="{% url 'tree_list' %}"  class="btn btn-primary">{% trans "Home page" %}</a>
                         </div>
                     </li>
+                     <li>
+                        <div style="padding-top: 10px">
+                            <a href="{% url 'about' %}"  class="btn btn-primary">{% trans "About" %}</a>
+                        </div>
+                    </li>
                      {% if user.is_authenticated %}
                      <li>
                          <div style="width: 500px; padding-top: 10px">

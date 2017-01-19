@@ -78,4 +78,6 @@ def savetree(request, tree_id):
     logger.info("User: " + request.user.username + " updated tree: " + str(tree.id))
     return HttpResponse(request)
 
-
+@csrf_exempt
+def about_view(request):
+    return render(request, 'account/about.html')
